@@ -14,7 +14,15 @@
     props: {},
     components: {
       NumPickerNumDisplay,
-    }
+    },
+    data() {
+      return {
+
+      }
+    },
+    methods: {},
+    computed: {},
+    watch: {},
   }
 </script>
 
