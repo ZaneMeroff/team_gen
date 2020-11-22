@@ -9,9 +9,18 @@ import NumPickerIndex from "./components/NumPicker/NumPickerIndex"
 
 export default {
   name: "App",
+  props: {},
   components: {
     NumPickerIndex,
-  }
+  },
+  data() {
+    return {
+
+    }
+  },
+  methods: {},
+  computed: {},
+  watch: {},
 }
 </script>
 
