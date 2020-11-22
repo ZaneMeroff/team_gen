@@ -1,6 +1,8 @@
 <template>
   <section class="npnd-perimeter-container">
+
     <p class="npnd-num">{{ number }}</p>
+
   </section>
 </template>
 
@@ -35,5 +37,4 @@
     font-weight: bold;
     font-family: courier;
   }
-
 </style>
