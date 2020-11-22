@@ -1,6 +1,6 @@
 <template>
 
-  <button class="np-arrow-btn">
+  <button @click="emitArrowBtnClick" class="np-arrow-btn">
     {{ arrowDirection === "up" ? "&#8593" : "&#8595" }}
   </button>
 
@@ -18,7 +18,12 @@
 
       }
     },
-    methods: {},
+    methods: {
+
+      emitArrowBtnClick() {
+        this.$emit("arrowClick", this.arrowDirection )
+      },
+    },
     computed: {},
     watch: {},
   }
