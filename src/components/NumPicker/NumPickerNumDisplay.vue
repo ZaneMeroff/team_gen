@@ -31,7 +31,9 @@
   }
 
   .npnd-num {
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: courier;
   }
 
 </style>
