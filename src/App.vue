@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Component_1 />
+    <NumPickerIndex />
   </div>
 </template>
 
 <script>
-import Component_1 from "./components/Component_1.vue"
+import NumPickerIndex from "./components/NumPicker/NumPickerIndex"
 
 export default {
   name: "App",
   components: {
-    Component_1,
+    NumPickerIndex,
   }
 }
 </script>
