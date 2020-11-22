@@ -1,14 +1,37 @@
 <template>
-  <h1>num picker num display</h1>
+  <section class="npnd-perimeter-container">
+    <p class="npnd-num">{{ number }}</p>
+  </section>
 </template>
 
 <script>
-export default {
-  name: "NumPickerNumDisplay",
-  props: {},
-}
+  export default {
+    name: "NumPickerNumDisplay",
+    props: {},
+    components: {},
+    data() {
+      return {
+        number: 0,
+      }
+    },
+    methods: {},
+    computed: {},
+    watch: {},
+  }
 </script>
 
 <style scoped>
+
+  .npnd-perimeter-container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .npnd-num {
+    font-size: 3rem;
+  }
 
 </style>
