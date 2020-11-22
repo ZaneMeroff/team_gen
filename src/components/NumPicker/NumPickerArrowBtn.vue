@@ -1,25 +1,27 @@
 <template>
-  <section class="np-arrow-btn">
 
-    <p>&#8593</p>
+  <button class="np-arrow-btn">
+    {{ arrowDirection === "up" ? "&#8593" : "&#8595" }}
+  </button>
 
-  </section>
 </template>
 
 <script>
-export default {
-  name: "NumPickerArrowBtn",
-  props: {},
-  components: {},
-  data() {
-    return {
+  export default {
+    name: "NumPickerArrowBtn",
+    props: {
+      arrowDirection: { type: String, default: "up" },
+    },
+    components: {},
+    data() {
+      return {
 
-    }
-  },
-  methods: {},
-  computed: {},
-  watch: {},
-}
+      }
+    },
+    methods: {},
+    computed: {},
+    watch: {},
+  }
 </script>
 
 <style scoped>
@@ -30,6 +32,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3rem;
   }
 
+  .np-arrow-btn:hover {
+    cursor: pointer;
+  }
 </style>
