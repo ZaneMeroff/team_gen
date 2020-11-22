@@ -4,8 +4,8 @@
     <NumPickerNumDisplay />
 
     <div class="arrow-btn-container">
-      <NumPickerArrowBtn />
-      <NumPickerArrowBtn />
+      <NumPickerArrowBtn :arrowDirection="'up'" />
+      <NumPickerArrowBtn :arrowDirection="'down'" />
     </div>
 
   </section>
@@ -45,5 +45,4 @@
   .arrow-btn-container {
     display: block;
   }
-
 </style>
