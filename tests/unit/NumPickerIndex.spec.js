@@ -86,21 +86,14 @@ describe("NumPickerIndex", () => {
 
     describe("events", () => {
 
-      it.skip("should call handleArrowClick when arrowClick is emitted", async () => {
+      it("should call handleArrowClick when arrowClick is emitted", () => {
         const component = mount(NumPickerIndex)
+        const spy = jest.spyOn(component.vm, "handleArrowClick")
         const numPickerArrowBtn = component.findComponent(NumPickerArrowBtn)
-        const spy = jest.spyOn(NumPickerIndex.methods, "handleArrowClick")
 
-        numPickerArrowBtn.vm.$emit("arrowClick", "up")
+        numPickerArrowBtn.vm.$emit("arrowClick")
 
-        await expect(spy).toHaveBeenCalledWith("up")
-        // **************************************************
-        // **************************************************
-        // **************************************************
-        //                need to fix this!
-        // **************************************************
-        // **************************************************
-        // **************************************************
+        expect(spy).toHaveBeenCalledTimes(1)
       })
     })
   })

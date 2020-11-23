@@ -21,7 +21,7 @@
     methods: {
 
       emitArrowBtnClick() {
-        this.$emit("arrowClick", this.arrowDirection )
+        this.$emit("arrowClick")
       },
     },
     computed: {},
