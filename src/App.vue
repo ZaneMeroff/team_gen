@@ -1,6 +1,12 @@
 <template>
   <div>
-    <NumPickerIndex />
+
+    <NumPickerIndex
+      :pickerType="'team'"/>
+
+    <NumPickerIndex
+      :pickerType="'player'"/>
+
   </div>
 </template>
 
