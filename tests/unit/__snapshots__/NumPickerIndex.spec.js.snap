@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumPickerIndex snapshots should render with default props 1`] = `
+<section
+  class="npi-perimeter-container"
+>
+  <numpickernumdisplay-stub
+    number="0"
+  />
+   
+  <div
+    class="arrow-btn-container"
+  >
+    <numpickerarrowbtn-stub
+      arrowdirection="up"
+    />
+     
+    <numpickerarrowbtn-stub
+      arrowdirection="down"
+    />
+  </div>
+</section>
+`;
