@@ -1,20 +1,40 @@
 <template>
   <div>
-    <Component_1 />
+
+    <NumPickerIndex
+      :pickerType="'team'"/>
+
+    <NumPickerIndex
+      :pickerType="'player'"/>
+
   </div>
 </template>
 
 <script>
-import Component_1 from "./components/Component_1.vue"
+import NumPickerIndex from "./components/NumPicker/NumPickerIndex"
 
 export default {
   name: "App",
+  props: {},
   components: {
-    Component_1,
-  }
+    NumPickerIndex,
+  },
+  data() {
+    return {
+
+    }
+  },
+  methods: {},
+  computed: {},
+  watch: {},
 }
 </script>
 
 <style>
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
 
 </style>
