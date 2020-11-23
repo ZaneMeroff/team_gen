@@ -7,11 +7,11 @@
 
     <div class="arrow-btn-container">
       <NumPickerArrowBtn
-        @arrowClick="handleArrowClick"
+        @arrowClick="handleArrowClick('up')"
         :arrowDirection="'up'"
       />
       <NumPickerArrowBtn
-        @arrowClick="handleArrowClick"
+        @arrowClick="handleArrowClick('down')"
         :arrowDirection="'down'"
       />
     </div>
