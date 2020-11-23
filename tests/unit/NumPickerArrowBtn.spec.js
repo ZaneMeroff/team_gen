@@ -48,7 +48,7 @@ describe("NumPickerArrowBtn", () => {
 
         component.vm.emitArrowBtnClick()
 
-        const expected = { "arrowClick": [[ "up" ]] }
+        const expected = { "arrowClick": [[]] }
         expect(component.emitted()).toEqual(expected)
       })
     })
@@ -63,7 +63,7 @@ describe("NumPickerArrowBtn", () => {
 
         component.find(".np-arrow-btn").trigger("click")
 
-        const expected = { "arrowClick": [[ "up" ]] }
+        const expected = { "arrowClick": [[]] }
         expect(component.emitted()).toEqual(expected)
       })
     })
