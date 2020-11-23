@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumPickerNumDisplay snapshots should render with default props 1`] = `
+<section
+  class="npnd-perimeter-container"
+>
+  <p
+    class="npnd-num"
+  >
+    0
+  </p>
+</section>
+`;
+
+exports[`NumPickerNumDisplay snapshots should set number prop 1`] = `
+<section
+  class="npnd-perimeter-container"
+>
+  <p
+    class="npnd-num"
+  >
+    5
+  </p>
+</section>
+`;
