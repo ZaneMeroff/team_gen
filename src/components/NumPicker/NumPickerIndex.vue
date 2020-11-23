@@ -1,11 +1,19 @@
 <template>
   <section class="npi-perimeter-container">
 
-    <NumPickerNumDisplay />
+    <NumPickerNumDisplay
+      :number="number"
+    />
 
     <div class="arrow-btn-container">
-      <NumPickerArrowBtn :arrowDirection="'up'" />
-      <NumPickerArrowBtn :arrowDirection="'down'" />
+      <NumPickerArrowBtn
+        @arrowClick="handleArrowClick"
+        :arrowDirection="'up'"
+      />
+      <NumPickerArrowBtn
+        @arrowClick="handleArrowClick"
+        :arrowDirection="'down'"
+      />
     </div>
 
   </section>
@@ -17,17 +25,27 @@
 
   export default {
     name: "NumPickerIndex",
-    props: {},
+    props: {
+      pickerType: { type: String, default: "team" }, //not using this yet
+    },
     components: {
       NumPickerNumDisplay,
       NumPickerArrowBtn,
     },
     data() {
       return {
-
+        number: 0,
       }
     },
-    methods: {},
+    methods: {
+
+      handleArrowClick(payload) {
+        if (payload === "up") {
+          this.number++
+        } else if (payload === "down" && this.number !== 0)
+          this.number--
+      },
+    },
     computed: {},
     watch: {},
   }
