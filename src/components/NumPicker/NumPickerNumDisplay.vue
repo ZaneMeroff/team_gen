@@ -9,11 +9,13 @@
 <script>
   export default {
     name: "NumPickerNumDisplay",
-    props: {},
+    props: {
+      number: { type: Number, default: 0 },
+    },
     components: {},
     data() {
       return {
-        number: 0,
+
       }
     },
     methods: {},
@@ -33,7 +35,7 @@
   }
 
   .npnd-num {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     font-family: courier;
   }
