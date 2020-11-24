@@ -2,7 +2,7 @@
   <section class="npi-perimeter-container">
 
     <NumPickerNumDisplay
-      :number="number"
+      :number="pickerType === 'team' ? teamNum : playerNum"
     />
 
     <div class="arrow-btn-container">
@@ -26,7 +26,7 @@
   export default {
     name: "NumPickerIndex",
     props: {
-      pickerType: { type: String, default: "team" }, //not using this yet
+      pickerType: { type: String, default: "team" },
     },
     components: {
       NumPickerNumDisplay,
@@ -34,19 +34,31 @@
     },
     data() {
       return {
-        number: 0,
+        // number: 0, //no longer needed!
       }
     },
     methods: {
 
       handleArrowClick(payload) {
         if (payload === "up") {
-          this.number++
-        } else if (payload === "down" && this.number !== 0)
-          this.number--
+          this.$store.commit(`plus${this.pickerType}Num`)
+        } else if (payload === "down" && this.pickerType === "team" && this.teamNum !== 0) {
+          this.$store.commit("minusteamNum")
+        } else if (payload === "down" && this.pickerType === "player" && this.playerNum !== 0) {
+          this.$store.commit("minusplayerNum")
+        }
       },
     },
-    computed: {},
+    computed: {
+
+      teamNum() {
+        return this.$store.state.teamNum
+      },
+
+      playerNum() {
+        return this.$store.state.playerNum
+      },
+    },
     watch: {},
   }
 </script>
