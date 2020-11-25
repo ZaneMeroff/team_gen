@@ -5,17 +5,18 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    teamNum: 0,
-    playerNum: 0,
+
+    teamNum: 2,
+    playerNum: 2,
   },
 
   mutations: {
 
     plusteamNum: (state) => state.teamNum++,
-    minusteamNum: (state) => state.teamNum--,
+    minusteamNum: (state) => state.teamNum !== 2 && state.teamNum--,
 
     plusplayerNum: (state) => state.playerNum++,
-    minusplayerNum: (state) => state.playerNum--,
+    minusplayerNum: (state) => state.playerNum !== 2 && state.playerNum--,
   },
 
   actions: {},
