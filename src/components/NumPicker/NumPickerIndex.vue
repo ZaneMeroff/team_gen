@@ -42,10 +42,8 @@
       handleArrowClick(payload) {
         if (payload === "up") {
           this.$store.commit(`plus${this.pickerType}Num`)
-        } else if (payload === "down" && this.pickerType === "team" && this.teamNum !== 0) {
-          this.$store.commit("minusteamNum")
-        } else if (payload === "down" && this.pickerType === "player" && this.playerNum !== 0) {
-          this.$store.commit("minusplayerNum")
+        } else if (payload === "down") {
+          this.$store.commit(`minus${this.pickerType}Num`)
         }
       },
     },
