@@ -1,14 +1,23 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { createLocalVue, mount, shallowMount } from '@vue/test-utils'
+import store from "@/store/index"
+import Vuex from "vuex"
 
 import NumPickerIndex from "@/components/NumPicker/NumPickerIndex"
 import NumPickerArrowBtn from "@/components/NumPicker/NumPickerArrowBtn"
+
+// -------- Vuex Setup ------------
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
+
+// --------------------------------
 
 describe("NumPickerIndex", () => {
 
   describe("snapshots", () => {
 
     it("should render with default props", () => {
-      const component = shallowMount(NumPickerIndex)
+      const component = shallowMount(NumPickerIndex, { store, localVue })
 
       expect(component.element).toMatchSnapshot()
     })
@@ -19,14 +28,16 @@ describe("NumPickerIndex", () => {
     describe("pickerType", () => {
 
       it("should have a default value", () => {
-        const component = shallowMount(NumPickerIndex)
+        const component = shallowMount(NumPickerIndex, { store, localVue })
 
         expect(component.vm.pickerType).toEqual("team")
       })
 
       it("should accept a string", () => {
         const propsData = { pickerType: "player" }
-        const component = shallowMount(NumPickerIndex, { propsData })
+        const component = shallowMount(NumPickerIndex, {
+          propsData, store, localVue
+        })
 
         expect(component.vm.pickerType).toEqual(propsData.pickerType)
       })
@@ -37,47 +48,98 @@ describe("NumPickerIndex", () => {
 
     describe("handleArrowClick", () => {
 
-      it("should increase prop:number if payload is 'up'", () => {
-        const component = shallowMount(NumPickerIndex)
-        const before = component.vm.$data.number
+      it("should increase teamNum in store if payload is 'up'", () => {
+        const propsData = { pickerType: "team" }
+        const component = shallowMount(NumPickerIndex, {
+          propsData, store, localVue
+        })
+        const before = store.state.teamNum
 
         component.vm.handleArrowClick("up")
 
-        const after = component.vm.$data.number
+        const after = store.state.teamNum
 
-        expect(before).toEqual(0)
-        expect(after).toEqual(1)
+        expect(before).toEqual(2)
+        expect(after).toEqual(3)
       })
 
-      it("should decrease prop:number if payload is 'down' and number !== 0", () => {
-        const component = shallowMount(NumPickerIndex)
-        component.vm.$data.number = 5
+      it("should increase playerNum in store if payload is 'up'", () => {
+        const propsData = { pickerType: "player" }
+        const component = shallowMount(NumPickerIndex, {
+          propsData, store, localVue
+        })
+        const before = store.state.playerNum
+
+        component.vm.handleArrowClick("up")
+
+        const after = store.state.playerNum
+
+        expect(before).toEqual(2)
+        expect(after).toEqual(3)
+      })
+
+      it("should decrease teamNum in store if payload is 'down'", () => {
+        const propsData = { pickerType: "team" }
+        const component = shallowMount(NumPickerIndex, {
+          propsData, store, localVue
+        })
+        store.state.teamNum = 5
+        const before = store.state.teamNum
 
         component.vm.handleArrowClick("down")
 
-        expect(component.vm.$data.number).toEqual(4)
+        const after = store.state.teamNum
+
+        expect(before).toEqual(5)
+        expect(after).toEqual(4)
       })
 
-      it("should not change prop:number if payload is 'down' and number === 0", () => {
-        const component = shallowMount(NumPickerIndex)
-        const before = component.vm.$data.number
+      it("should decrease playerNum in store if payload is 'down'", () => {
+        const propsData = { pickerType: "player" }
+        const component = shallowMount(NumPickerIndex, {
+          propsData, store, localVue
+        })
+        store.state.playerNum = 5
+        const before = store.state.playerNum
 
         component.vm.handleArrowClick("down")
 
-        const after = component.vm.$data.number
+        const after = store.state.playerNum
 
-        expect(before).toEqual(after)
+        expect(before).toEqual(5)
+        expect(after).toEqual(4)
       })
 
-      it("should not change prop:number if payload is 'lollygag'", () => {
-        const component = shallowMount(NumPickerIndex)
-        const before = component.vm.$data.number
+      it("should NOT decrease teamNum in store if value is 2", () => {
+        const propsData = { pickerType: "team" }
+        const component = shallowMount(NumPickerIndex, {
+          propsData, store, localVue
+        })
+        store.state.teamNum = 2
+        const before = store.state.teamNum
 
-        component.vm.handleArrowClick("lollygag")
+        component.vm.handleArrowClick("down")
 
-        const after = component.vm.$data.number
+        const after = store.state.teamNum
 
-        expect(before).toEqual(after)
+        expect(before).toEqual(2)
+        expect(after).toEqual(2)
+      })
+
+      it("should NOT decrease playerNum in store if value is 2", () => {
+        const propsData = { pickerType: "player" }
+        const component = shallowMount(NumPickerIndex, {
+          propsData, store, localVue
+        })
+        store.state.playerNum = 2
+        const before = store.state.playerNum
+
+        component.vm.handleArrowClick("down")
+
+        const after = store.state.playerNum
+
+        expect(before).toEqual(2)
+        expect(after).toEqual(2)
       })
     })
   })
@@ -87,7 +149,7 @@ describe("NumPickerIndex", () => {
     describe("events", () => {
 
       it("should call handleArrowClick when arrowClick is emitted", () => {
-        const component = mount(NumPickerIndex)
+        const component = mount(NumPickerIndex, { store, localVue })
         const spy = jest.spyOn(component.vm, "handleArrowClick")
         const numPickerArrowBtn = component.findComponent(NumPickerArrowBtn)
 
