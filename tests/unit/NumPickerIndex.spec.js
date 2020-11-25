@@ -3,7 +3,7 @@ import store from "@/store/index"
 import Vuex from "vuex"
 
 import NumPickerIndex from "@/components/NumPicker/NumPickerIndex"
-import NumPickerArrowBtn from "@/components/NumPicker/NumPickerArrowBtn"
+import ArrowBtn from "@/components/ArrowBtn"
 
 // -------- Vuex Setup ------------
 
@@ -151,9 +151,9 @@ describe("NumPickerIndex", () => {
       it("should call handleArrowClick when arrowClick is emitted", () => {
         const component = mount(NumPickerIndex, { store, localVue })
         const spy = jest.spyOn(component.vm, "handleArrowClick")
-        const numPickerArrowBtn = component.findComponent(NumPickerArrowBtn)
+        const arrowBtn = component.findComponent(ArrowBtn)
 
-        numPickerArrowBtn.vm.$emit("arrowClick")
+        arrowBtn.vm.$emit("arrowClick")
 
         expect(spy).toHaveBeenCalledTimes(1)
       })
