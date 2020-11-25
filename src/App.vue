@@ -1,6 +1,12 @@
 <template>
   <div>
 
+    <ArrowBtn
+      :arrowDirection="'left'"/>
+
+    <ArrowBtn
+      :arrowDirection="'right'"/>
+
     <NumPickerIndex
       :pickerType="'team'"/>
 
@@ -12,12 +18,14 @@
 
 <script>
 import NumPickerIndex from "./components/NumPicker/NumPickerIndex"
+import ArrowBtn from "./components/ArrowBtn"
 
 export default {
   name: "App",
   props: {},
   components: {
     NumPickerIndex,
+    ArrowBtn,
   },
   data() {
     return {
