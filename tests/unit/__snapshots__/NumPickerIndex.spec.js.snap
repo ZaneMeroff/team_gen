@@ -11,11 +11,11 @@ exports[`NumPickerIndex snapshots should render with default props 1`] = `
   <div
     class="arrow-btn-container"
   >
-    <numpickerarrowbtn-stub
+    <arrowbtn-stub
       arrowdirection="up"
     />
      
-    <numpickerarrowbtn-stub
+    <arrowbtn-stub
       arrowdirection="down"
     />
   </div>
