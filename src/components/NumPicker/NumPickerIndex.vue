@@ -6,11 +6,11 @@
     />
 
     <div class="arrow-btn-container">
-      <NumPickerArrowBtn
+      <ArrowBtn
         @arrowClick="handleArrowClick('up')"
         :arrowDirection="'up'"
       />
-      <NumPickerArrowBtn
+      <ArrowBtn
         @arrowClick="handleArrowClick('down')"
         :arrowDirection="'down'"
       />
@@ -21,7 +21,7 @@
 
 <script>
   import NumPickerNumDisplay from "./NumPickerNumDisplay"
-  import NumPickerArrowBtn from "./NumPickerArrowBtn"
+  import ArrowBtn from "../ArrowBtn"
 
   export default {
     name: "NumPickerIndex",
@@ -30,7 +30,7 @@
     },
     components: {
       NumPickerNumDisplay,
-      NumPickerArrowBtn,
+      ArrowBtn,
     },
     data() {
       return {
