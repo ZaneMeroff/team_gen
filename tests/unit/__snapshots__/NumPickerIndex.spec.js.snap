@@ -5,7 +5,7 @@ exports[`NumPickerIndex snapshots should render with default props 1`] = `
   class="npi-perimeter-container"
 >
   <numpickernumdisplay-stub
-    number="0"
+    number="2"
   />
    
   <div
