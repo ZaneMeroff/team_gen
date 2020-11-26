@@ -5,7 +5,9 @@
       <ArrowBtn :arrowDirection="'left'"/>
     </router-link>
 
-    <ArrowBtn :arrowDirection="'right'"/>
+    <router-link class="router-link" to="/screen3">
+      <ArrowBtn :arrowDirection="'right'"/>
+    </router-link>
 
     <input style="display:block" placeholder="name 1"/>
     <input style="display:block" placeholder="name 2"/>
