@@ -9,11 +9,7 @@
       <ArrowBtn :arrowDirection="'right'"/>
     </router-link>
 
-    <input style="display:block" placeholder="name 1"/>
-    <input style="display:block" placeholder="name 2"/>
-    <input style="display:block" placeholder="name 3"/>
-    <input style="display:block" placeholder="name 4"/>
-    <input style="display:block" placeholder="name 5"/>
+    <NameInput v-for="player in playerNum"/>
 
   </div>
 </template>
@@ -22,11 +18,19 @@
   // need spec with snapshot
 
   import ArrowBtn from "../components/ArrowBtn"
+  import NameInput from "../components/NameInput"
 
   export default {
     name: "EnterNames",
     components: {
       ArrowBtn,
+      NameInput,
+    },
+    computed: {
+
+      playerNum() {
+        return this.$store.state.playerNum
+      },
     },
   }
 </script>
