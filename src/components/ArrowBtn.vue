@@ -53,11 +53,11 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    padding-bottom: 7px;
   }
 
   .nav-arrow-btn {
     border-radius: 37.5px;
-    padding-bottom: 7px;
   }
 
   .arrow-btn:hover {
