@@ -4,7 +4,7 @@
     <ArrowBtn
       :arrowDirection="'left'"/>
 
-    <router-link class="router-link" to="/screen2">
+    <router-link class="router-link" to="/enterNames">
       <ArrowBtn :arrowDirection="'right'"/>
     </router-link>
 
@@ -18,11 +18,13 @@
 </template>
 
 <script>
+  // need spec with snapshot
+
   import ArrowBtn from "../components/ArrowBtn"
   import NumPickerIndex from "../components/NumPicker/NumPickerIndex"
 
   export default {
-    name: "Screen1",
+    name: "SelectTeamPlayerNum",
     components: {
       NumPickerIndex,
       ArrowBtn,

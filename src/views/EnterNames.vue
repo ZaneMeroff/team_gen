@@ -5,7 +5,7 @@
       <ArrowBtn :arrowDirection="'left'"/>
     </router-link>
 
-    <router-link class="router-link" to="/screen3">
+    <router-link class="router-link" to="/displayResults">
       <ArrowBtn :arrowDirection="'right'"/>
     </router-link>
 
@@ -19,10 +19,12 @@
 </template>
 
 <script>
+  // need spec with snapshot
+
   import ArrowBtn from "../components/ArrowBtn"
 
   export default {
-    name: "Screen2",
+    name: "EnterNames",
     components: {
       ArrowBtn,
     },

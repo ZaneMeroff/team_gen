@@ -11,6 +11,8 @@
 </template>
 
 <script>
+  // need spec with snapshot
+  
   export default {
     name: "PageNotFound",
     components: {
