@@ -9,7 +9,10 @@
       <ArrowBtn :arrowDirection="'right'"/>
     </router-link>
 
-    <NameInput v-for="player in playerNum"/>
+    <NameInput
+      v-for="(player, index) in playerNum"
+      :id="index"
+    />
 
   </div>
 </template>
@@ -26,6 +29,7 @@
       ArrowBtn,
       NameInput,
     },
+    methods: {},
     computed: {
 
       playerNum() {

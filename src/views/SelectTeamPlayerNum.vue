@@ -29,6 +29,21 @@
       NumPickerIndex,
       ArrowBtn,
     },
+    computed: {
+
+      playerNum() {
+        return this.$store.state.playerNum
+      },
+    },
+    watch: {
+      playerNum() {
+        let players = []
+        for (let i = 1; i <= this.playerNum; i++) {
+          players.push("")
+        }
+        this.$store.commit("updatePlayerList", players)
+      },
+    },
   }
 </script>
 

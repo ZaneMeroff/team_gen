@@ -5,9 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
     teamNum: 2,
     playerNum: 2,
+    playerList: ["", ""],
   },
 
   mutations: {
@@ -17,6 +17,9 @@ export default new Vuex.Store({
 
     plusplayerNum: (state) => state.playerNum++,
     minusplayerNum: (state) => state.playerNum !== 2 && state.playerNum--,
+
+    updatePlayerList: (state, data) => state.playerList = data,
+    updatePlayerName: (state, data) => state.playerList[data.id] = data.name,
   },
 
   actions: {},
