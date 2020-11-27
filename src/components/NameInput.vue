@@ -1,7 +1,12 @@
 <template>
   <form autocomplete="off">
 
-    <input class="name-input" placeholder="name..."/>
+    <input
+      @change="handleInputChange"
+      v-model="name"
+      class="name-input"
+      placeholder="player name..."
+    />
 
   </form>
 </template>
@@ -9,15 +14,26 @@
 <script>
   export default {
     name: "NameInput",
-    props: {},
+    props: {
+      id: { type: Number, default: 0 },
+    },
     components: {},
     data() {
       return {
-
+        name: "",
       }
     },
-    methods: {},
-    computed: {},
+    methods: {
+
+      handleInputChange() {
+        this.$store.commit("updatePlayerName", {id: this.id, name: this.name})
+      }
+    },
+    computed: {
+      playerList() {
+        return this.$store.state.playerList
+      },
+    },
     watch: {},
   }
 </script>
