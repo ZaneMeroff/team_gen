@@ -11,6 +11,7 @@
 
     <NameInput
       v-for="(player, index) in playerNum"
+      :key="index"
       :id="index"
     />
 
