@@ -10,9 +10,10 @@
     </router-link>
 
     <NameInput
-      v-for="(player, index) in playerNum"
+      v-for="(player, index) in playerList"
       :key="index"
       :id="index"
+      :playerName="player"
     />
 
   </div>
@@ -33,8 +34,8 @@
     methods: {},
     computed: {
 
-      playerNum() {
-        return this.$store.state.playerNum
+      playerList() {
+        return this.$store.state.playerList
       },
     },
   }
