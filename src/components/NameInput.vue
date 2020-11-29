@@ -16,6 +16,7 @@
     name: "NameInput",
     props: {
       id: { type: Number, default: 0 },
+      playerName: { type: String, default: "" },
     },
     components: {},
     data() {
@@ -35,6 +36,11 @@
       },
     },
     watch: {},
+    mounted() {
+      if ( this.playerName ) {
+        this.name = this.playerName
+      }
+    },
   }
 </script>
 
