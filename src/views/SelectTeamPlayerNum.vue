@@ -2,6 +2,7 @@
   <div>
 
     <ArrowBtn
+      :disabled="true"
       :arrowDirection="'left'"/>
 
     <router-link class="router-link" to="/enterNames">
