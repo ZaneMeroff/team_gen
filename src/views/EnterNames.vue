@@ -5,9 +5,11 @@
       <ArrowBtn :arrowDirection="'left'"/>
     </router-link>
 
-    <router-link class="router-link" to="/displayResults">
+    <div @click="validateInputs">
       <ArrowBtn :arrowDirection="'right'"/>
-    </router-link>
+    </div>
+
+    <p v-if="showErr">Please enter a name for every player</p>
 
     <NameInput
       v-for="(player, index) in playerList"
@@ -31,7 +33,29 @@
       ArrowBtn,
       NameInput,
     },
-    methods: {},
+    data() {
+      return {
+        showErr: false,
+      }
+    },
+    methods: {
+
+      validateInputs() {
+        let error = false
+        this.playerList.forEach(input => {
+          if ( !input.length ) { error = true }
+        })
+        this.evaluateError(error)
+      },
+
+      evaluateError(error) {
+        if ( !error ) {
+          this.$router.push("/displayResults")
+        } else {
+          this.showErr = true
+        }
+      },
+    },
     computed: {
 
       playerList() {
