@@ -12,15 +12,6 @@
     props: {
       number: { type: Number, default: 0 },
     },
-    components: {},
-    data() {
-      return {
-
-      }
-    },
-    methods: {},
-    computed: {},
-    watch: {},
   }
 </script>
 

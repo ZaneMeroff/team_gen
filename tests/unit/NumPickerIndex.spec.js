@@ -144,6 +144,29 @@ describe("NumPickerIndex", () => {
     })
   })
 
+  describe("computed properties", () => {
+
+    describe("teamNum", () => {
+
+      it("should return default teamNum of 2", () => {
+        const component = mount(NumPickerIndex, { store, localVue })
+
+        const expected = 2
+        expect(component.vm.teamNum).toEqual(expected)
+      })
+    })
+
+    describe("playerNum", () => {
+
+      it("should return default playerNum of 2", () => {
+        const component = mount(NumPickerIndex, { store, localVue })
+
+        const expected = 2
+        expect(component.vm.playerNum).toEqual(expected)
+      })
+    })
+  })
+
   describe("user interactions", () => {
 
     describe("events", () => {

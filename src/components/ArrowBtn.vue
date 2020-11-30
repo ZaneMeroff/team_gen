@@ -14,7 +14,6 @@
     props: {
       arrowDirection: { type: String, default: "up" },
     },
-    components: {},
     data() {
       return {
         arrowDisplay: "",
@@ -39,8 +38,6 @@
     mounted() {
       this.setArrowDisplay(this.arrowDirection)
     },
-    computed: {},
-    watch: {},
   }
 </script>
 

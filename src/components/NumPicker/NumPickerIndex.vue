@@ -32,11 +32,6 @@
       NumPickerNumDisplay,
       ArrowBtn,
     },
-    data() {
-      return {
-
-      }
-    },
     methods: {
 
       handleArrowClick(payload) {
@@ -57,7 +52,6 @@
         return this.$store.state.playerNum
       },
     },
-    watch: {},
   }
 </script>
 
