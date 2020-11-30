@@ -34,7 +34,7 @@
     },
     data() {
       return {
-        // number: 0, //no longer needed!
+
       }
     },
     methods: {
