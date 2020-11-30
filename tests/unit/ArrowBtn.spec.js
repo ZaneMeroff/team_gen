@@ -109,6 +109,20 @@ describe("ArrowBtn", () => {
     })
   })
 
+  describe("lifecyle hooks", () => {
+
+    describe("mounted", () => {
+
+      it("should call setArrowDisplay with a direction", () => {
+        const spy = jest.spyOn(ArrowBtn.methods, "setArrowDisplay")
+        const propsData = { arrowDirection: "down" }
+        const component = shallowMount(ArrowBtn, { propsData })
+
+        expect(spy).toHaveBeenCalledWith("down")
+      })
+    })
+  })
+
   describe("user interactions", () => {
 
     describe("events", () => {
