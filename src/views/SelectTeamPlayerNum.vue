@@ -5,9 +5,11 @@
       :disabled="true"
       :arrowDirection="'left'"/>
 
-    <router-link class="router-link" to="/enterNames">
+    <div @click="validateInputs">
       <ArrowBtn :arrowDirection="'right'"/>
-    </router-link>
+    </div>
+
+    <p v-if="showErr">Sorry, you can't have more teams than players!</p>
 
     <NumPickerIndex
       :pickerType="'team'"/>
@@ -30,10 +32,28 @@
       NumPickerIndex,
       ArrowBtn,
     },
+    data() {
+      return {
+        showErr: false,
+      }
+    },
+    methods: {
+
+      validateInputs() {
+        if ( this.teamNum > this.playerNum ) {
+          this.showErr = true
+        } else {
+          this.$router.push("/enterNames")
+        }
+      },
+    },
     computed: {
 
       playerNum() {
         return this.$store.state.playerNum
+      },
+      teamNum() {
+        return this.$store.state.teamNum
       },
     },
     watch: {
