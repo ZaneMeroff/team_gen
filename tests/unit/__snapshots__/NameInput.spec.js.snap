@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NameInput snapshots should render with default props 1`] = `
+<form
+  autocomplete="off"
+>
+  <input
+    class="name-input"
+    placeholder="player name..."
+  />
+</form>
+`;
