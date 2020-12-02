@@ -15,7 +15,7 @@
   export default {
     name: "NameInput",
     props: {
-      id: { type: Number, default: 0 },
+      id:         { type: Number, default: 0 },
       playerName: { type: String, default: "" },
     },
     data() {
