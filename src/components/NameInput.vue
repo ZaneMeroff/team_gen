@@ -18,7 +18,6 @@
       id: { type: Number, default: 0 },
       playerName: { type: String, default: "" },
     },
-    components: {},
     data() {
       return {
         name: "",
@@ -35,7 +34,6 @@
         return this.$store.state.playerList
       },
     },
-    watch: {},
     mounted() {
       if ( this.playerName ) {
         this.name = this.playerName

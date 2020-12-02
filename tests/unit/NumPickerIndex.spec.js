@@ -149,7 +149,7 @@ describe("NumPickerIndex", () => {
     describe("teamNum", () => {
 
       it("should return default teamNum of 2", () => {
-        const component = mount(NumPickerIndex, { store, localVue })
+        const component = shallowMount(NumPickerIndex, { store, localVue })
 
         const expected = 2
         expect(component.vm.teamNum).toEqual(expected)
@@ -159,7 +159,7 @@ describe("NumPickerIndex", () => {
     describe("playerNum", () => {
 
       it("should return default playerNum of 2", () => {
-        const component = mount(NumPickerIndex, { store, localVue })
+        const component = shallowMount(NumPickerIndex, { store, localVue })
 
         const expected = 2
         expect(component.vm.playerNum).toEqual(expected)
