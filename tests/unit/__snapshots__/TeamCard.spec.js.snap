@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamCard snapshots should render with default props 1`] = `
+<div
+  class="team-card-perimeter-container"
+>
+  <p>
+    team #0
+  </p>
+   
+  <ul />
+</div>
+`;
+
+exports[`TeamCard snapshots should set member prop 1`] = `
+<div
+  class="team-card-perimeter-container"
+>
+  <p>
+    team #0
+  </p>
+   
+  <ul>
+    <li>
+      Bob
+    </li>
+    <li>
+      Sue
+    </li>
+    <li>
+      Abe
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`TeamCard snapshots should set teamId prop 1`] = `
+<div
+  class="team-card-perimeter-container"
+>
+  <p>
+    team #5
+  </p>
+   
+  <ul />
+</div>
+`;
