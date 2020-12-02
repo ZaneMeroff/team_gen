@@ -14,18 +14,9 @@
   export default {
     name: "TeamCard",
     props: {
-      members: { type: Array, default: [] },
-      teamId: { type: Number, default: 0 },
+      members: { type: Array, default: () => [] },
+      teamId:  { type: Number, default: 0 },
     },
-    components: {},
-    data() {
-      return {
-
-      }
-    },
-    methods: {},
-    computed: {},
-    watch: {},
   }
 </script>
 
