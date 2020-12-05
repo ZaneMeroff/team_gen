@@ -16,7 +16,7 @@ describe("NumPickerIndex", () => {
 
   describe("snapshots", () => {
 
-    it("should render with default props", () => {
+    it("should render with default html", () => {
       const component = shallowMount(NumPickerIndex, { store, localVue })
 
       expect(component.element).toMatchSnapshot()
