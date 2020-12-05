@@ -20,7 +20,7 @@ describe("DisplayResults", () => {
 
   describe("snapshots", () => {
 
-    it.skip("should render with default props", () => {
+    it.skip("should render with default html", () => {
       const component = shallowMount(DisplayResults, { store, localVue })
 
       // ****************************************

@@ -6,7 +6,7 @@ describe("TeamCard", () => {
 
   describe("snapshots", () => {
 
-    it("should render with default props", () => {
+    it("should render with default html", () => {
       const component = shallowMount(TeamCard)
 
       expect(component.element).toMatchSnapshot()
