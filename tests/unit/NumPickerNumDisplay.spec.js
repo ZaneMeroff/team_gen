@@ -6,7 +6,7 @@ describe("NumPickerNumDisplay", () => {
 
   describe("snapshots", () => {
 
-    it("should render with default props", () => {
+    it("should render with default html", () => {
       const component = shallowMount(NumPickerNumDisplay)
 
       expect(component.element).toMatchSnapshot()
