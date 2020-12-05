@@ -16,7 +16,7 @@ describe("NameInput", () => {
 
   describe("snapshots", () => {
 
-    it("should render with default props", () => {
+    it("should render with default html", () => {
       const component = shallowMount(NameInput, { store, localVue })
 
       expect(component.element).toMatchSnapshot()
