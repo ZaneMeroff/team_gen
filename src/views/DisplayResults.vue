@@ -21,8 +21,6 @@
 </template>
 
 <script>
-  // need spec with snapshot
-
   import ArrowBtn from "../components/ArrowBtn"
   import TeamCard from "../components/TeamCard"
 
@@ -36,7 +34,7 @@
       return {
         shuffledPlayerList: [],
         emptyTeams: [],
-        playersPerTeam: 0,
+        playersPerTeam: 1,
         stepCounter: 0,
         results: [],
       }
