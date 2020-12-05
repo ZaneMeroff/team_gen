@@ -36,7 +36,7 @@ describe("ArrowBtn", () => {
 
     describe("arrowDisplay", () => {
 
-      it("should have a default value", () => {
+      it("should return a default value", () => {
         const component = shallowMount(ArrowBtn)
 
         expect(component.vm.$data.arrowDisplay).toEqual("&#8593")
