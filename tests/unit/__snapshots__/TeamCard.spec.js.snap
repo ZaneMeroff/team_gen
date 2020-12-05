@@ -12,7 +12,7 @@ exports[`TeamCard snapshots should render with default props 1`] = `
 </div>
 `;
 
-exports[`TeamCard snapshots should set member prop 1`] = `
+exports[`TeamCard snapshots should set members prop 1`] = `
 <div
   class="team-card-perimeter-container"
 >
