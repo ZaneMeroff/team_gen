@@ -66,7 +66,7 @@ describe("NameInput", () => {
 
     describe("name", () => {
 
-      it("should have a default value", () => {
+      it("should return a default value", () => {
         const component = shallowMount(NameInput, store, localVue)
 
         expect(component.vm.$data.name).toEqual("")
