@@ -5,7 +5,7 @@
       :disabled="true"
       :arrowDirection="'left'"/>
 
-    <div @click="validateInputs">
+    <div id="right-arrow" @click="validateInputs">
       <ArrowBtn :arrowDirection="'right'"/>
     </div>
 
@@ -21,8 +21,6 @@
 </template>
 
 <script>
-  // need spec with snapshot
-
   import ArrowBtn from "../components/ArrowBtn"
   import NumPickerIndex from "../components/NumPicker/NumPickerIndex"
 
