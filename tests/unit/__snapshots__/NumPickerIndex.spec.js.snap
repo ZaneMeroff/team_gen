@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NumPickerIndex snapshots should render with default props 1`] = `
+exports[`NumPickerIndex snapshots should render with default html 1`] = `
 <section
   class="npi-perimeter-container"
 >
   <numpickernumdisplay-stub
     number="2"
+    pickertype="teams"
   />
    
   <div

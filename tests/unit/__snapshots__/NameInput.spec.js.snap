@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NameInput snapshots should render with default props 1`] = `
+exports[`NameInput snapshots should render with default html 1`] = `
 <form
   autocomplete="off"
 >

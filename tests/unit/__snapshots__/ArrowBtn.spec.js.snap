@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArrowBtn snapshots should render with default props 1`] = `
+exports[`ArrowBtn snapshots should render with default html 1`] = `
 <button
   class="arrow-btn"
 >
