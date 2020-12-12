@@ -1,21 +1,29 @@
 <template>
-  <div>
+  <div class="select-team-player-num-container">
 
-    <ArrowBtn
-      :disabled="true"
-      :arrowDirection="'left'"/>
+    <div class="nav-btn-container">
 
-    <div id="right-arrow" @click="validateInputs">
-      <ArrowBtn :arrowDirection="'right'"/>
+      <ArrowBtn
+        :disabled="true"
+        :arrowDirection="'left'"/>
+
+      <div id="right-arrow" @click="validateInputs">
+        <ArrowBtn :arrowDirection="'right'"/>
+      </div>
+
     </div>
 
-    <p v-if="showErr">Sorry, you can't have more teams than players!</p>
+    <div class="err-msg">
+      <p v-if="showErr">Sorry, you can't have more teams than players!</p>
+    </div>
 
-    <NumPickerIndex
-      :pickerType="'team'"/>
+    <div class="pickers-container">
+      <NumPickerIndex
+        :pickerType="'teams'"/>
 
-    <NumPickerIndex
-      :pickerType="'player'"/>
+      <NumPickerIndex
+        :pickerType="'players'"/>
+    </div>
 
   </div>
 </template>
@@ -67,5 +75,18 @@
 </script>
 
 <style scoped>
+
+  .select-team-player-num-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pickers-container {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 </style>
