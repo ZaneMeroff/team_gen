@@ -50,14 +50,27 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    padding-bottom: 7px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .arrow-btn:focus:not(:focus-visible) {
+    outline: none;
   }
 
   .nav-arrow-btn {
     border-radius: 37.5px;
+    border: 1px solid #000;
+    background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset;
   }
 
   .arrow-btn:hover {
     cursor: pointer;
   }
+
+  span {
+    font-family: sans-serif;
+  }
+
 </style>
