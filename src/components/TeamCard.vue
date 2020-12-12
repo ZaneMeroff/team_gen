@@ -22,13 +22,18 @@
 
 <style scoped>
 
+  ul {
+    margin-left: 20px;
+  }
+
   .team-card-perimeter-container {
     height: auto;
-    width: 300px;
+    width: 250px;
     border: 1px solid black;
-    margin: 10px;
+    margin: 20px 0px;
     border-radius: 10px;
-    padding-left: 10px;
+    padding: 10px;
+    background-color: #FFF;
   }
 
 </style>
