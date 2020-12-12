@@ -30,14 +30,13 @@
 
   .npnd-num {
     font-size: 3.5rem;
-    font-weight: bold;
-    font-family: courier;
+    /* font-weight: bold;
+    font-family: courier; */
   }
 
   .picker-title {
     position: absolute;
     margin-bottom: 90px;
-
   }
 
 </style>
