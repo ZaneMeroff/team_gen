@@ -1,22 +1,30 @@
 <template>
-  <div>
+  <div class="enter-names-container">
 
-    <router-link class="router-link" to="/">
-      <ArrowBtn :arrowDirection="'left'"/>
-    </router-link>
+    <div class="nav-btn-container">
 
-    <div id="right-arrow" @click="validateInputs">
-      <ArrowBtn :arrowDirection="'right'"/>
+      <router-link class="router-link" to="/">
+        <ArrowBtn :arrowDirection="'left'"/>
+      </router-link>
+
+      <div id="right-arrow" @click="validateInputs">
+        <ArrowBtn :arrowDirection="'right'"/>
+      </div>
+
     </div>
 
-    <p v-if="showErr">Please enter a name for every player</p>
+    <div class="err-msg">
+      <p v-if="showErr">Please enter a name for every player</p>
+    </div>
 
-    <NameInput
-      v-for="(player, index) in playerList"
-      :key="index"
-      :id="index"
-      :playerName="player"
-    />
+    <div class="name-inputs-container">
+      <NameInput
+        v-for="(player, index) in playerList"
+        :key="index"
+        :id="index"
+        :playerName="player"
+      />
+    </div>
 
   </div>
 </template>
@@ -64,5 +72,18 @@
 </script>
 
 <style scoped>
+
+  .name-inputs-container {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .enter-names-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 </style>
