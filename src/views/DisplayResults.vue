@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div class="display-results-container">
 
     <div class="nav-btn-container">
-
       <router-link class="router-link" to="/enterNames">
         <ArrowBtn :arrowDirection="'left'"/>
       </router-link>
@@ -11,15 +10,16 @@
         :disabled="true"
         :arrowDirection="'right'"
       />
-
     </div>
 
-    <TeamCard
-      v-for="(card, index) in results"
-      :key="index"
-      :members="card.members"
-      :teamId="card.id"
-    />
+    <div class="team-cards-container">
+      <TeamCard
+        v-for="(card, index) in results"
+        :key="index"
+        :members="card.members"
+        :teamId="card.id"
+      />
+    </div>
 
   </div>
 </template>
@@ -109,5 +109,18 @@
 </script>
 
 <style scoped>
+
+  .display-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-cards-container {
+    width: auto;
+    height: 400px;
+    overflow-y: scroll;
+    margin-top: 30px;
+  }
 
 </style>
