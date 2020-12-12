@@ -2,7 +2,6 @@
   <div class="select-team-player-num-container">
 
     <div class="nav-btn-container">
-
       <ArrowBtn
         :disabled="true"
         :arrowDirection="'left'"/>
@@ -10,7 +9,6 @@
       <div id="right-arrow" @click="validateInputs">
         <ArrowBtn :arrowDirection="'right'"/>
       </div>
-
     </div>
 
     <div class="err-msg">
@@ -83,7 +81,6 @@
   }
 
   .pickers-container {
-    border: 2px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
