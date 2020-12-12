@@ -1,14 +1,18 @@
 <template>
   <div>
 
-    <router-link class="router-link" to="/enterNames">
-      <ArrowBtn :arrowDirection="'left'"/>
-    </router-link>
+    <div class="nav-btn-container">
 
-    <ArrowBtn
-      :disabled="true"
-      :arrowDirection="'right'"
-    />
+      <router-link class="router-link" to="/enterNames">
+        <ArrowBtn :arrowDirection="'left'"/>
+      </router-link>
+
+      <ArrowBtn
+        :disabled="true"
+        :arrowDirection="'right'"
+      />
+
+    </div>
 
     <TeamCard
       v-for="(card, index) in results"
