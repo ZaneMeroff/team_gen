@@ -30,7 +30,7 @@ describe("NumPickerIndex", () => {
       it("should have a default value", () => {
         const component = shallowMount(NumPickerIndex, { store, localVue })
 
-        expect(component.vm.pickerType).toEqual("team")
+        expect(component.vm.pickerType).toEqual("teams")
       })
 
       it("should accept a string", () => {
@@ -49,7 +49,7 @@ describe("NumPickerIndex", () => {
     describe("handleArrowClick", () => {
 
       it("should increase teamNum in store if payload is 'up'", () => {
-        const propsData = { pickerType: "team" }
+        const propsData = { pickerType: "teams" }
         const component = shallowMount(NumPickerIndex, {
           propsData, store, localVue
         })
@@ -64,7 +64,7 @@ describe("NumPickerIndex", () => {
       })
 
       it("should increase playerNum in store if payload is 'up'", () => {
-        const propsData = { pickerType: "player" }
+        const propsData = { pickerType: "players" }
         const component = shallowMount(NumPickerIndex, {
           propsData, store, localVue
         })
@@ -79,7 +79,7 @@ describe("NumPickerIndex", () => {
       })
 
       it("should decrease teamNum in store if payload is 'down'", () => {
-        const propsData = { pickerType: "team" }
+        const propsData = { pickerType: "teams" }
         const component = shallowMount(NumPickerIndex, {
           propsData, store, localVue
         })
@@ -95,7 +95,7 @@ describe("NumPickerIndex", () => {
       })
 
       it("should decrease playerNum in store if payload is 'down'", () => {
-        const propsData = { pickerType: "player" }
+        const propsData = { pickerType: "players" }
         const component = shallowMount(NumPickerIndex, {
           propsData, store, localVue
         })
@@ -111,7 +111,7 @@ describe("NumPickerIndex", () => {
       })
 
       it("should NOT decrease teamNum in store if value is 2", () => {
-        const propsData = { pickerType: "team" }
+        const propsData = { pickerType: "teams" }
         const component = shallowMount(NumPickerIndex, {
           propsData, store, localVue
         })
@@ -127,7 +127,7 @@ describe("NumPickerIndex", () => {
       })
 
       it("should NOT decrease playerNum in store if value is 2", () => {
-        const propsData = { pickerType: "player" }
+        const propsData = { pickerType: "players" }
         const component = shallowMount(NumPickerIndex, {
           propsData, store, localVue
         })
