@@ -61,7 +61,7 @@
   .npi-perimeter-container {
     height: 150px;
     width: 150px;
-    border: 1px solid #000;
+    border: 2px dotted #FFF;
     display: flex;
     margin: 20px;
   }
