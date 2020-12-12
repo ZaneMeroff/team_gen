@@ -1,6 +1,8 @@
 <template>
   <section class="npnd-perimeter-container">
 
+    <p class="picker-title">{{ pickerType }}</p>
+
     <p class="npnd-num">{{ number }}</p>
 
   </section>
@@ -11,6 +13,7 @@
     name: "NumPickerNumDisplay",
     props: {
       number: { type: Number, default: 0 },
+      pickerType: { type: String, default: "teams" },
     },
   }
 </script>
@@ -30,4 +33,11 @@
     font-weight: bold;
     font-family: courier;
   }
+
+  .picker-title {
+    position: absolute;
+    margin-bottom: 90px;
+
+  }
+
 </style>
