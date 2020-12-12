@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TeamCard snapshots should render with default props 1`] = `
+exports[`TeamCard snapshots should render with default html 1`] = `
 <div
   class="team-card-perimeter-container"
 >

@@ -12,11 +12,11 @@ export default new Vuex.Store({
 
   mutations: {
 
-    plusteamNum: (state) => state.teamNum++,
-    minusteamNum: (state) => state.teamNum !== 2 && state.teamNum--,
+    plusteamsNum: (state) => state.teamNum++,
+    minusteamsNum: (state) => state.teamNum !== 2 && state.teamNum--,
 
-    plusplayerNum: (state) => state.playerNum++,
-    minusplayerNum: (state) => state.playerNum !== 2 && state.playerNum--,
+    plusplayersNum: (state) => state.playerNum++,
+    minusplayersNum: (state) => state.playerNum !== 2 && state.playerNum--,
 
     updatePlayerList: (state, data) => state.playerList = data,
     updatePlayerName: (state, data) => state.playerList[data.id] = data.name,

@@ -2,7 +2,8 @@
   <section class="npi-perimeter-container">
 
     <NumPickerNumDisplay
-      :number="pickerType === 'team' ? teamNum : playerNum"
+      :number="pickerType === 'teams' ? teamNum : playerNum"
+      :pickerType="pickerType"
     />
 
     <div class="arrow-btn-container">
@@ -26,7 +27,7 @@
   export default {
     name: "NumPickerIndex",
     props: {
-      pickerType: { type: String, default: "team" },
+      pickerType: { type: String, default: "teams" },
     },
     components: {
       NumPickerNumDisplay,
@@ -60,8 +61,9 @@
   .npi-perimeter-container {
     height: 150px;
     width: 150px;
-    border: 1px solid #000;
+    border: 2px dotted #FFF;
     display: flex;
+    margin: 20px;
   }
 
   .arrow-btn-container {

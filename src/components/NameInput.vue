@@ -45,12 +45,14 @@
 <style scoped>
 
   .name-input {
-    height: 30px;
-    width: 200px;
+    height: 32px;
+    width: 220px;
     display: block;
-    border-radius: 5px;
+    border-radius: 16px;
     margin: 10px 0px;
     padding-left: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #000;
   }
 
 </style>
