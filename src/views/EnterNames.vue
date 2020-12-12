@@ -74,10 +74,11 @@
 <style scoped>
 
   .name-inputs-container {
-    border: 2px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 400px;
+    overflow-y: scroll;
   }
 
   .enter-names-container {
