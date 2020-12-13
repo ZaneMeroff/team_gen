@@ -1,5 +1,5 @@
 <template>
-  <section class="npi-perimeter-container">
+  <div class="npi-perimeter-container">
 
     <NumPickerNumDisplay
       :number="pickerType === 'teams' ? teamNum : playerNum"
@@ -17,7 +17,7 @@
       />
     </div>
 
-  </section>
+  </div>
 </template>
 
 <script>
@@ -61,7 +61,7 @@
   .npi-perimeter-container {
     height: 150px;
     width: 150px;
-    border: 2px dotted #FFF;
+    border: 5px dotted #FFF;
     display: flex;
     margin: 20px;
   }
@@ -69,4 +69,5 @@
   .arrow-btn-container {
     display: block;
   }
+  
 </style>
