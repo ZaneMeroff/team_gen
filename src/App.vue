@@ -36,6 +36,8 @@
 
   .app-title {
     margin: 20px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px #FFF;
   }
 
   .copywrite-text {
@@ -59,6 +61,7 @@
     text-align: center;
     font-size: .8rem;
     color: #FFF;
+    text-decoration: underline;
   }
 
   .router-link {

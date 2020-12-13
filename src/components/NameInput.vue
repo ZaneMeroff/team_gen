@@ -53,6 +53,8 @@
     padding-left: 10px;
     font-size: 1.2rem;
     border: 1px solid #000;
+    background-color: #FFF;
+    box-shadow: 0 0 1rem rgba(110, 15, 155, .6) inset;
   }
 
 </style>

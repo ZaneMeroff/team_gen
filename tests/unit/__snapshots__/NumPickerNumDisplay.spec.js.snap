@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NumPickerNumDisplay snapshots should render with default html 1`] = `
-<section
+<div
   class="npnd-perimeter-container"
 >
   <p
@@ -15,11 +15,11 @@ exports[`NumPickerNumDisplay snapshots should render with default html 1`] = `
   >
     0
   </p>
-</section>
+</div>
 `;
 
 exports[`NumPickerNumDisplay snapshots should set number prop 1`] = `
-<section
+<div
   class="npnd-perimeter-container"
 >
   <p
@@ -33,5 +33,5 @@ exports[`NumPickerNumDisplay snapshots should set number prop 1`] = `
   >
     5
   </p>
-</section>
+</div>
 `;
