@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NumPickerIndex snapshots should render with default html 1`] = `
-<section
+<div
   class="npi-perimeter-container"
 >
   <numpickernumdisplay-stub
@@ -20,5 +20,5 @@ exports[`NumPickerIndex snapshots should render with default html 1`] = `
       arrowdirection="down"
     />
   </div>
-</section>
+</div>
 `;
