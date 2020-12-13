@@ -12,7 +12,7 @@
     </div>
 
     <div class="err-msg">
-      <p v-if="showErr">Sorry, you can't have more teams than players!</p>
+      <p v-if="showErr">you can't have more teams than players</p>
     </div>
 
     <div class="pickers-container">
