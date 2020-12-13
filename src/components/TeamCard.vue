@@ -23,7 +23,7 @@
 <style scoped>
 
   ul {
-    margin-left: 20px;
+    margin: 4px 0px 4px 20px;
   }
 
   .team-card-perimeter-container {
@@ -34,6 +34,7 @@
     border-radius: 10px;
     padding: 10px;
     background-color: #FFF;
+    box-shadow: 0 0 1rem rgba(110, 15, 155, .8) inset;
   }
 
 </style>
