@@ -118,7 +118,7 @@
 
   .team-cards-container {
     width: auto;
-    height: 400px;
+    height: 410px;
     overflow-y: scroll;
     margin-top: 30px;
   }
