@@ -10,9 +10,8 @@ Welcome to Team Generator, a mobile friendly single page web application created
 #### Why Did I Build This?
 This is the most recent project I’ve created to showcase the evolution of my programming skills. The app features clean, reusable code and components built with methods leveraging the single responsibility principle. A simple global Vuex store is integrated with Vue Router for view mapping. Jest is used in conjunction with Vue Test Utils to create a robust and thorough testing suite.
 
-#### Screenshot
-- screenshot will go here once UI is finished...
-![screenshot]()
+#### Screenshots
+![screenshot](https://user-images.githubusercontent.com/53405028/102018215-1deda880-3d29-11eb-963c-ab4b9d2097ce.png)
 
 #### Jest Testing Suite
 The project currently contains **83 unit tests** across all 8 components so far, however, the testing suite is still a work in progress. I have written unit tests covering all elements of each Vue component with happy/sad paths as necessary for: data, methods, props, watch, computed, lifecycle hooks, events/user interactions, and snapshot renders. To run the testing suite, see instructions in "How to run the Jest testing suite with NPM" below.
