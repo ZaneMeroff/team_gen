@@ -2,7 +2,6 @@
   <div class="enter-names-container">
 
     <div class="nav-btn-container">
-
       <router-link class="router-link" to="/">
         <ArrowBtn :arrowDirection="'left'"/>
       </router-link>
@@ -10,11 +9,10 @@
       <div id="right-arrow" @click="validateInputs">
         <ArrowBtn :arrowDirection="'right'"/>
       </div>
-
     </div>
 
     <div class="err-msg">
-      <p v-if="showErr">Please enter a name for every player</p>
+      <p v-if="showErr">please enter a name for every player</p>
     </div>
 
     <div class="name-inputs-container">
