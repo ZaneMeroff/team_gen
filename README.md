@@ -1,4 +1,4 @@
-# Team Generator 🍄
+# Team Generator
 use this app to generate random teams with ease!
 
 #### Link to Live Site
