@@ -69,8 +69,14 @@
     cursor: pointer;
   }
 
+  .arrow-btn:active {
+    color: #FFF;
+  }
+
   span {
     font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 3.6rem;
   }
 
 </style>
