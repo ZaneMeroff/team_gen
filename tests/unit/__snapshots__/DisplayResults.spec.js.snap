@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayResults snapshots should render with default html 1`] = `
+<div
+  class="display-results-container"
+>
+  <div
+    class="nav-btn-container"
+  >
+    <router-link-stub
+      ariacurrentvalue="page"
+      class="router-link"
+      event="click"
+      tag="a"
+      to="/enterNames"
+    >
+      <arrowbtn-stub
+        arrowdirection="left"
+      />
+    </router-link-stub>
+     
+    <arrowbtn-stub
+      arrowdirection="right"
+      disabled="true"
+    />
+  </div>
+   
+  <div
+    class="team-cards-container"
+  />
+</div>
+`;
