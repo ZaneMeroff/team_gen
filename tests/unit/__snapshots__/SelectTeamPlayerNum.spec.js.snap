@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectTeamPlayerNum snapshots should render error message if showErr is true 1`] = `
+<div
+  class="select-team-player-num-container"
+>
+  <div
+    class="nav-btn-container"
+  >
+    <arrowbtn-stub
+      arrowdirection="left"
+      disabled="true"
+    />
+     
+    <div
+      id="right-arrow"
+    >
+      <arrowbtn-stub
+        arrowdirection="right"
+      />
+    </div>
+  </div>
+   
+  <div
+    class="err-msg"
+  >
+    <!---->
+  </div>
+   
+  <div
+    class="pickers-container"
+  >
+    <numpickerindex-stub
+      pickertype="teams"
+    />
+     
+    <numpickerindex-stub
+      pickertype="players"
+    />
+  </div>
+</div>
+`;
+
+exports[`SelectTeamPlayerNum snapshots should render with default html 1`] = `
+<div
+  class="select-team-player-num-container"
+>
+  <div
+    class="nav-btn-container"
+  >
+    <arrowbtn-stub
+      arrowdirection="left"
+      disabled="true"
+    />
+     
+    <div
+      id="right-arrow"
+    >
+      <arrowbtn-stub
+        arrowdirection="right"
+      />
+    </div>
+  </div>
+   
+  <div
+    class="err-msg"
+  >
+    <!---->
+  </div>
+   
+  <div
+    class="pickers-container"
+  >
+    <numpickerindex-stub
+      pickertype="teams"
+    />
+     
+    <numpickerindex-stub
+      pickertype="players"
+    />
+  </div>
+</div>
+`;
