@@ -16,26 +16,14 @@ describe("EnterNames", () => {
 
   describe("snapshots", () => {
 
-    it.skip("should render with default html", () => {
+    it("should render with default html", () => {
       const component = shallowMount(EnterNames, { store, localVue })
-
-      // ****************************************
-      // ****************************************
-      //       will need to refactor this
-      // ****************************************
-      // ****************************************
 
       expect(component.element).toMatchSnapshot()
     })
 
-    it.skip("should render error message if showErr is true", () => {
+    it("should render error message if showErr is true", () => {
       const component = shallowMount(EnterNames, { store, localVue })
-
-      // ****************************************
-      // ****************************************
-      //        will need to refactor this
-      // ****************************************
-      // ****************************************
 
       expect(component.element).toMatchSnapshot()
     })
@@ -68,18 +56,12 @@ describe("EnterNames", () => {
 
       it("should call evaluateError with false if playerList doesn't contain an empty string", () => {
         const component = shallowMount(EnterNames, { store, localVue })
-        // const spy = jest.spyOn(component.vm, "evaluateError")
         component.vm.evaluateError = jest.fn()
         // ****************************************
         // ****************************************
-        //     could be imporved with a spy
+        //     need to refactor with spy
         // ****************************************
         // ****************************************
-
-        // const $router = { name: "displayResults" }
-
-        // expect(wrapper.vm.$route.name).toBe($route.name)
-
         store.state.playerList = [ "Bob", "Joe" ]
         component.vm.validateInputs()
 
@@ -93,7 +75,7 @@ describe("EnterNames", () => {
       it.skip("should route to displayResults if error is false", () => {
         // ****************************************
         // ****************************************
-        //               needs work
+        //     failing at this.$router.push()
         // ****************************************
         // ****************************************
         const component = shallowMount(EnterNames, { store, localVue })

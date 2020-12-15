@@ -20,14 +20,8 @@ describe("DisplayResults", () => {
 
   describe("snapshots", () => {
 
-    it.skip("should render with default html", () => {
+    it("should render with default html", () => {
       const component = shallowMount(DisplayResults, { store, localVue })
-
-      // ****************************************
-      // ****************************************
-      //       will need to refactor this
-      // ****************************************
-      // ****************************************
 
       expect(component.element).toMatchSnapshot()
     })

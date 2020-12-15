@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageNotFound snapshots should render with default html 1`] = `
+<div
+  class="page-not-found-container"
+>
+  <p
+    class="err-txt"
+  >
+    sorry, this page was not found :(
+  </p>
+   
+  <router-link-stub
+    ariacurrentvalue="page"
+    class="router-link"
+    event="click"
+    tag="a"
+    to="/"
+  >
+    <button>
+      home
+    </button>
+  </router-link-stub>
+</div>
+`;

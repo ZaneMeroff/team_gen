@@ -23,6 +23,7 @@
     background-color: #313131;
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
   }
 
   .app-inner-container {
@@ -32,6 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
   }
 
   .app-title {

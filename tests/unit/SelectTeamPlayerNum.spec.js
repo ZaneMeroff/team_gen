@@ -19,26 +19,14 @@ describe("SelectTeamPlayerNum", () => {
 
   describe("snapshots", () => {
 
-    it.skip("should render with default html", () => {
+    it("should render with default html", () => {
       const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
-
-      // ****************************************
-      // ****************************************
-      //       will need to refactor this
-      // ****************************************
-      // ****************************************
 
       expect(component.element).toMatchSnapshot()
     })
 
-    it.skip("should render error message if showErr is true", () => {
+    it("should render error message if showErr is true", () => {
       const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
-
-      // ****************************************
-      // ****************************************
-      //        will need to refactor this
-      // ****************************************
-      // ****************************************
 
       expect(component.element).toMatchSnapshot()
     })
@@ -76,37 +64,29 @@ describe("SelectTeamPlayerNum", () => {
       })
 
       it.skip("should set route to EnterNames if teamNum < playerNum", () => {
-
         // ****************************************
         // ****************************************
-        //               needs work
+        //  failing at this.$router.push("/enterNames")
         // ****************************************
         // ****************************************
-
         const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
 
         store.state.teamNum = 2
         store.state.playerNum = 4
         component.vm.validateInputs()
-
-        // expect this.$router.push("/enterNames")
       })
 
       it.skip("should set route to EnterNames if teamNum === playerNum", () => {
-
         // ****************************************
         // ****************************************
-        //               needs work
+        //  failing at this.$router.push("/enterNames")
         // ****************************************
         // ****************************************
-
         const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
 
         store.state.teamNum = 2
         store.state.playerNum = 2
         component.vm.validateInputs()
-
-        // expect this.$router.push("/enterNames")
       })
     })
   })
@@ -144,11 +124,12 @@ describe("SelectTeamPlayerNum", () => {
         store.state.playerNum++
 
         const expected = [ "", "", "" ]
-        // console.log(mutations.updatePlayerList);
+
         expect(mutations.updatePlayerList).toHaveBeenCalledWith({}, expected)
         // ****************************************
         // ****************************************
-        //               needs work
+        //    this is failing at
+        //    this.$store.commit("updatePlayerList", players)
         // ****************************************
         // ****************************************
       })
