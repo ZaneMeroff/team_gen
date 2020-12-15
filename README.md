@@ -14,7 +14,7 @@ This is the most recent project I’ve created to showcase the evolution of my p
 ![screenshot](https://user-images.githubusercontent.com/53405028/102018215-1deda880-3d29-11eb-963c-ab4b9d2097ce.png)
 
 #### Jest Testing Suite
-The project currently contains **83 unit tests** across all 8 components so far, however, the testing suite is still a work in progress. I have written unit tests covering all elements of each Vue component with happy/sad paths as necessary for: data, methods, props, watch, computed, lifecycle hooks, events/user interactions, and snapshot renders. To run the testing suite, see instructions in "How to run the Jest testing suite with NPM" below.
+The project currently contains **84 unit tests** across all 9 components so far, however, the testing suite is still a work in progress. I have written unit tests covering all elements of each Vue component with happy/sad paths as necessary for: data, methods, props, watch, computed, lifecycle hooks, events/user interactions, and snapshot renders. To run the testing suite, see instructions in "How to run the Jest testing suite with NPM" below.
 
 #### Directions for Use
 - First, you must select the number of desired teams as well as the number of desired players. The number selection boxes cannot be less than two players or two teams and the number of teams cannot be greater than the number of players. After you have made your selection, press the right arrow button near the top of the screen.
