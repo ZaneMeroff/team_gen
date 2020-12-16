@@ -14,27 +14,26 @@
   export default {
     name: "TeamCard",
     props: {
-      members: { type: Array, default: () => [] },
-      teamId:  { type: Number, default: 0 },
+      members:  { type: Array, default: () => [] },
+      teamId:   { type: Number, default: 0 },
     },
   }
 </script>
 
 <style scoped>
 
+  .team-card-perimeter-container {
+    background-color: #FFF;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 1rem rgba(110, 15, 155, .8) inset;
+    height: auto;
+    margin: 0px auto 20px auto;
+    padding: 10px;
+    width: 220px;
+  }
+
   ul {
     margin: 4px 0px 4px 20px;
   }
-
-  .team-card-perimeter-container {
-    height: auto;
-    width: 220px;
-    border: 1px solid black;
-    margin: 0px auto 20px auto;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #FFF;
-    box-shadow: 0 0 1rem rgba(110, 15, 155, .8) inset;
-  }
-
 </style>
