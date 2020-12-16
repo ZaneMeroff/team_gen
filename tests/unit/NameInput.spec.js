@@ -1,6 +1,5 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from "@vue/test-utils"
 import Vuex from "vuex"
-
 import NameInput from "@/components/NameInput"
 
 // -------- Vuex Setup ------------
@@ -8,7 +7,8 @@ import NameInput from "@/components/NameInput"
 const localVue = createLocalVue()
 localVue.use(Vuex)
 const mutations = { updatePlayerName: jest.fn() }
-const store = new Vuex.Store({ mutations })
+const state = { playerList: ["", ""] }
+const store = new Vuex.Store({ mutations, state })
 
 // --------------------------------
 
@@ -87,7 +87,7 @@ describe("NameInput", () => {
         component.vm.handleInputChange()
 
         const expected = { id: propsData.id, name: propsData.playerName }
-        expect(mutations.updatePlayerName).toHaveBeenCalledWith( {}, expected)
+        expect(mutations.updatePlayerName).toHaveBeenCalledWith(state, expected)
       })
     })
   })
@@ -96,12 +96,11 @@ describe("NameInput", () => {
 
     describe("playerList", () => {
 
-      it.skip("should return default playerList value", () => {
-        // **************************************
-        // **************************************
-        //  need to figure out how to test this
-        // **************************************
-        // **************************************
+      it("should return default playerList value", () => {
+        const component = shallowMount(NameInput, { store, localVue })
+
+        const expected = ["", ""]
+        expect(component.vm.playerList).toEqual(expected)
       })
     })
   })
