@@ -111,15 +111,11 @@
 <style scoped>
 
   .display-results-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: auto;
   }
 
   .team-cards-container {
-    width: auto;
-    height: 410px;
-    overflow-y: scroll;
+    height: auto;
     margin-top: 30px;
   }
 

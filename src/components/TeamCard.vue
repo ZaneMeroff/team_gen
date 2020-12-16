@@ -28,9 +28,9 @@
 
   .team-card-perimeter-container {
     height: auto;
-    width: 250px;
+    width: 220px;
     border: 1px solid black;
-    margin: 20px 0px;
+    margin: 0px auto 20px auto;
     border-radius: 10px;
     padding: 10px;
     background-color: #FFF;

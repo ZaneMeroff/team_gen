@@ -72,17 +72,12 @@
 <style scoped>
 
   .name-inputs-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 400px;
-    overflow-y: scroll;
+    height: auto;
+    width: auto;
   }
 
   .enter-names-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: auto;
   }
 
 </style>
