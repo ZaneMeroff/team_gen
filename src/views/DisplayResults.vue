@@ -7,8 +7,8 @@
       </router-link>
 
       <ArrowBtn
-        :disabled="true"
         :arrowDirection="'right'"
+        :disabled="true"
       />
     </div>
 
@@ -36,11 +36,11 @@
     },
     data() {
       return {
-        shuffledPlayerList: [],
         emptyTeams: [],
         playersPerTeam: 1,
-        stepCounter: 0,
         results: [],
+        shuffledPlayerList: [],
+        stepCounter: 0,
       }
     },
     methods: {
