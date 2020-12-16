@@ -1,6 +1,6 @@
 import { createLocalVue, shallowMount } from "@vue/test-utils"
-import Vuex from "vuex"
 import NameInput from "@/components/NameInput"
+import Vuex from "vuex"
 
 // -------- Vuex Setup ------------
 

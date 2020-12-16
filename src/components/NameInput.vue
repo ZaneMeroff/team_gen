@@ -3,9 +3,9 @@
 
     <input
       @change="handleInputChange"
-      v-model="name"
       class="name-input"
       placeholder="player name..."
+      v-model="name"
     />
 
   </form>
@@ -15,8 +15,8 @@
   export default {
     name: "NameInput",
     props: {
-      id:         { type: Number, default: 0 },
-      playerName: { type: String, default: "" },
+      id:          { type: Number, default: 0 },
+      playerName:  { type: String, default: "" },
     },
     data() {
       return {
@@ -45,16 +45,15 @@
 <style scoped>
 
   .name-input {
-    height: 32px;
-    width: 220px;
-    display: block;
+    background-color: #FFF;
+    border: 1px solid #000;
     border-radius: 16px;
+    box-shadow: 0 0 1rem rgba(110, 15, 155, .6) inset;
+    display: block;
+    font-size: 1.2rem;
+    height: 32px;
     margin: 0px auto 10px auto;
     padding-left: 10px;
-    font-size: 1.2rem;
-    border: 1px solid #000;
-    background-color: #FFF;
-    box-shadow: 0 0 1rem rgba(110, 15, 155, .6) inset;
+    width: 220px;
   }
-
 </style>

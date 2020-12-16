@@ -1,8 +1,8 @@
+import ArrowBtn from "@/components/ArrowBtn"
 import { createLocalVue, mount, shallowMount } from "@vue/test-utils"
+import NumPickerIndex from "@/components/NumPicker/NumPickerIndex"
 import store from "@/store/index"
 import Vuex from "vuex"
-import NumPickerIndex from "@/components/NumPicker/NumPickerIndex"
-import ArrowBtn from "@/components/ArrowBtn"
 
 // -------- Vuex Setup ------------
 

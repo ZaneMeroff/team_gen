@@ -30,8 +30,8 @@
       pickerType: { type: String, default: "teams" },
     },
     components: {
-      NumPickerNumDisplay,
       ArrowBtn,
+      NumPickerNumDisplay,
     },
     methods: {
 
@@ -45,12 +45,12 @@
     },
     computed: {
 
-      teamNum() {
-        return this.$store.state.teamNum
-      },
-
       playerNum() {
         return this.$store.state.playerNum
+      },
+
+      teamNum() {
+        return this.$store.state.teamNum
       },
     },
   }
@@ -58,16 +58,15 @@
 
 <style scoped>
 
-  .npi-perimeter-container {
-    height: 150px;
-    width: 150px;
-    border: 5px dotted #FFF;
-    display: flex;
-    margin: 20px;
-  }
-
   .arrow-btn-container {
     display: block;
   }
-  
+
+  .npi-perimeter-container {
+    border: 5px dotted #FFF;
+    display: flex;
+    height: 150px;
+    margin: 20px;
+    width: 150px;
+  }
 </style>
