@@ -1,7 +1,7 @@
 import { createLocalVue, shallowMount } from "@vue/test-utils"
-import Vuex from "vuex"
-import VueRouter from "vue-router"
 import SelectTeamPlayerNum from "@/views/SelectTeamPlayerNum"
+import VueRouter from "vue-router"
+import Vuex from "vuex"
 
 // --------- Vuex & Router setup ------------
 
