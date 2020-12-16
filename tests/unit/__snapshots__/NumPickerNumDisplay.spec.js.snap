@@ -35,3 +35,21 @@ exports[`NumPickerNumDisplay snapshots should set number prop 1`] = `
   </p>
 </div>
 `;
+
+exports[`NumPickerNumDisplay snapshots should set pickerType prop 1`] = `
+<div
+  class="npnd-perimeter-container"
+>
+  <p
+    class="picker-title"
+  >
+    players
+  </p>
+   
+  <p
+    class="npnd-num"
+  >
+    0
+  </p>
+</div>
+`;
