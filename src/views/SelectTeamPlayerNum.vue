@@ -3,8 +3,9 @@
 
     <div class="nav-btn-container">
       <ArrowBtn
+        :arrowDirection="'left'"
         :disabled="true"
-        :arrowDirection="'left'"/>
+      />
 
       <div id="right-arrow" @click="validateInputs">
         <ArrowBtn :arrowDirection="'right'"/>
@@ -33,8 +34,8 @@
   export default {
     name: "SelectTeamPlayerNum",
     components: {
-      NumPickerIndex,
       ArrowBtn,
+      NumPickerIndex,
     },
     data() {
       return {
@@ -57,6 +58,7 @@
       playerNum() {
         return this.$store.state.playerNum
       },
+
       teamNum() {
         return this.$store.state.teamNum
       },
@@ -75,16 +77,15 @@
 
 <style scoped>
 
-  .select-team-player-num-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .pickers-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
+  .select-team-player-num-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 </style>
