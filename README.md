@@ -8,13 +8,13 @@ http://zanemeroff.github.io/team_gen
 Welcome to Team Generator, a mobile friendly single page web application created to make assigning random teams quick and easy! Use it for board game night, volleyball in the park, or virtually any situation where you need to decide teams without human bias.
 
 #### Why Did I Build This?
-This is the most recent project I’ve created to showcase the evolution of my programming skills. The app features clean, reusable code and components built with methods leveraging the single responsibility principle. A simple global Vuex store is integrated with Vue Router for view mapping. Jest is used in conjunction with Vue Test Utils to create a robust and thorough testing suite.
+This is the most recent project I’ve created to showcase the evolution of my programming skills. The app features clean, reusable code and components built with methods leveraging the single responsibility principle. A simple global Vuex store is integrated with Vue Router for view mapping. Jest is used in conjunction with Vue Test Utils to create a robust and thorough testing suite that accomplishes nearly 100% testing coverage.
 
 #### Screenshots
 ![screenshot](https://user-images.githubusercontent.com/53405028/102018215-1deda880-3d29-11eb-963c-ab4b9d2097ce.png)
 
 #### Jest Testing Suite
-The project currently contains **84 unit tests** across all 9 components so far, however, the testing suite is still a work in progress. I have written unit tests covering all elements of each Vue component with happy/sad paths as necessary for: data, methods, props, watch, computed, lifecycle hooks, events/user interactions, and snapshot renders. To run the testing suite, see instructions in "How to run the Jest testing suite with NPM" below.
+The project contains **90 unit tests** across all 9 components making unit testing coverage nearly 100%. I’ve written unit tests covering all elements of each Vue component with happy/sad paths as necessary for: data, methods, props, watch, computed, lifecycle hooks, events/user interactions, routes, and snapshot renders. To run the testing suite and view test coverage, see instructions in "How to run the Jest testing suite with NPM" below.
 
 #### Directions for Use
 - First, you must select the number of desired teams as well as the number of desired players. The number selection boxes cannot be less than two players or two teams and the number of teams cannot be greater than the number of players. After you have made your selection, press the right arrow button near the top of the screen.
@@ -44,7 +44,7 @@ The project currently contains **84 unit tests** across all 9 components so far,
 
 #### How to run the Jest testing suite with NPM
 1. after the project has been cloned down and `npm install` has been ran, `cd` into the root directory
-2. run `npm test` to view test results
+2. run `npm test` to view test results as well as testing coverage
 
 #### This project was created by:
 Zachary Nemeroff https://github.com/ZaneMeroff
