@@ -48,6 +48,7 @@
           this.showErr = true
         } else {
           this.$router.push("/enterNames")
+            .catch(() => {})
         }
       },
     },
