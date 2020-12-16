@@ -49,7 +49,7 @@
     width: 220px;
     display: block;
     border-radius: 16px;
-    margin: 10px 0px;
+    margin: 0px auto 10px auto;
     padding-left: 10px;
     font-size: 1.2rem;
     border: 1px solid #000;
