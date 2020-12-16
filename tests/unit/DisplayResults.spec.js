@@ -1,8 +1,8 @@
 import { createLocalVue, shallowMount } from "@vue/test-utils"
-import store from "@/store/index"
-import Vuex from "vuex"
-import VueRouter from "vue-router"
 import DisplayResults from "@/views/DisplayResults"
+import store from "@/store/index"
+import VueRouter from "vue-router"
+import Vuex from "vuex"
 
 // --------- Vuex & Router setup ------------
 
