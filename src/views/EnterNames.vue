@@ -55,6 +55,7 @@
       evaluateError(error) {
         if ( !error ) {
           this.$router.push("/displayResults")
+            .catch(() => {})
         } else {
           this.showErr = true
         }
