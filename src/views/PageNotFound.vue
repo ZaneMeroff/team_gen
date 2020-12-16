@@ -19,10 +19,16 @@
 
 <style scoped>
 
-  .page-not-found-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  button {
+    border: 2px solid #000;
+    border-radius: 20px;
+    height: 40px;
+    margin: 30px 0px;
+    width: 80px;
+  }
+
+  button:hover {
+    cursor: pointer;
   }
 
   .err-txt {
@@ -30,16 +36,9 @@
     margin-top: 50px;
   }
 
-  button {
-    height: 40px;
-    width: 80px;
-    border-radius: 20px;
-    border: 2px solid #000;
-    margin: 30px 0px;
+  .page-not-found-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
-
-  button:hover {
-    cursor: pointer;
-  }
-
 </style>
