@@ -1,5 +1,5 @@
-import { shallowMount } from "@vue/test-utils"
 import ArrowBtn from "@/components/ArrowBtn"
+import { shallowMount } from "@vue/test-utils"
 
 describe("ArrowBtn", () => {
 
@@ -55,10 +55,10 @@ describe("ArrowBtn", () => {
         const component = shallowMount(ArrowBtn)
 
         const expected = {
-          up:    "&#8593",
           down:  "&#8595",
           left:  "&#x2190",
           right: "&#x2192",
+          up:    "&#8593",
         }
         expect(component.vm.$data.arrowKey).toEqual(expected)
       })
