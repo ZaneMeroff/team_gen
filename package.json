@@ -27,6 +27,13 @@
     "not dead"
   ],
   "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,vue}",
+      "!src/main.js",
+      "!src/router/routes.js",
+      "!src/store/index.js"
+    ],
     "preset": "@vue/cli-plugin-unit-jest"
   }
 }
