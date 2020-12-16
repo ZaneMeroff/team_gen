@@ -1,4 +1,4 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from "@vue/test-utils"
 import store from "@/store/index"
 import Vuex from "vuex"
 import VueRouter from "vue-router"
@@ -7,6 +7,7 @@ import EnterNames from "@/views/EnterNames"
 // --------- Vuex & Router setup ------------
 
 const localVue = createLocalVue()
+const router = new VueRouter()
 localVue.use(Vuex)
 localVue.use(VueRouter)
 
@@ -26,6 +27,14 @@ describe("EnterNames", () => {
       const component = shallowMount(EnterNames, { store, localVue })
 
       expect(component.element).toMatchSnapshot()
+    })
+
+    it("should render with NameInputs from playerList", () => {
+      store.state.playerList = ["Ned", "Ted", "Sue"]
+      const component = shallowMount(EnterNames, { store, localVue })
+
+      expect(component.element).toMatchSnapshot()
+      store.state.playerList = ["", ""]
     })
   })
 
@@ -55,34 +64,26 @@ describe("EnterNames", () => {
       })
 
       it("should call evaluateError with false if playerList doesn't contain an empty string", () => {
-        const component = shallowMount(EnterNames, { store, localVue })
-        component.vm.evaluateError = jest.fn()
-        // ****************************************
-        // ****************************************
-        //     need to refactor with spy
-        // ****************************************
-        // ****************************************
+        const component = shallowMount(EnterNames, { store, localVue, router })
+        const spy = jest.spyOn(component.vm, "evaluateError")
+
         store.state.playerList = [ "Bob", "Joe" ]
         component.vm.validateInputs()
 
-        expect(component.vm.evaluateError).toHaveBeenCalledWith(false)
+        expect(spy).toHaveBeenCalledWith(false)
         store.state.playerList = ["", ""]
       })
     })
 
     describe("evaluateError", () => {
 
-      it.skip("should route to displayResults if error is false", () => {
-        // ****************************************
-        // ****************************************
-        //     failing at this.$router.push()
-        // ****************************************
-        // ****************************************
-        const component = shallowMount(EnterNames, { store, localVue })
+      it("should route to displayResults if error is false", () => {
+        const component = shallowMount(EnterNames, { store, localVue, router })
 
         component.vm.evaluateError(false)
 
-        expect(component.vm.$router).toEqual(["/displayResults"])
+        const result = component.vm.$router.history.current.path
+        expect(result).toEqual("/displayResults")
       })
 
       it("should set showErr to true if error is true", () => {

@@ -1,5 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
-
+import { shallowMount } from "@vue/test-utils"
 import TeamCard from "@/components/TeamCard"
 
 describe("TeamCard", () => {

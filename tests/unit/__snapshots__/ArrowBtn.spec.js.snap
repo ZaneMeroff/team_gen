@@ -7,3 +7,11 @@ exports[`ArrowBtn snapshots should render with default html 1`] = `
   <span />
 </button>
 `;
+
+exports[`ArrowBtn snapshots should render with nav-arrow-btn class 1`] = `
+<button
+  class="arrow-btn nav-arrow-btn"
+>
+  <span />
+</button>
+`;

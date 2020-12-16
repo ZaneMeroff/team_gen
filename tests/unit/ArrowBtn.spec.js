@@ -1,5 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
-
+import { shallowMount } from "@vue/test-utils"
 import ArrowBtn from "@/components/ArrowBtn"
 
 describe("ArrowBtn", () => {
@@ -8,6 +7,13 @@ describe("ArrowBtn", () => {
 
     it("should render with default html", () => {
       const component = shallowMount(ArrowBtn)
+
+      expect(component.element).toMatchSnapshot()
+    })
+
+    it("should render with nav-arrow-btn class", () => {
+      const propsData = { arrowDirection: "left" }
+      const component = shallowMount(ArrowBtn, { propsData })
 
       expect(component.element).toMatchSnapshot()
     })

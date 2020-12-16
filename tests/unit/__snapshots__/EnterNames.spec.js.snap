@@ -49,6 +49,59 @@ exports[`EnterNames snapshots should render error message if showErr is true 1`]
 </div>
 `;
 
+exports[`EnterNames snapshots should render with NameInputs from playerList 1`] = `
+<div
+  class="enter-names-container"
+>
+  <div
+    class="nav-btn-container"
+  >
+    <router-link-stub
+      ariacurrentvalue="page"
+      class="router-link"
+      event="click"
+      tag="a"
+      to="/"
+    >
+      <arrowbtn-stub
+        arrowdirection="left"
+      />
+    </router-link-stub>
+     
+    <div
+      id="right-arrow"
+    >
+      <arrowbtn-stub
+        arrowdirection="right"
+      />
+    </div>
+  </div>
+   
+  <div
+    class="err-msg"
+  >
+    <!---->
+  </div>
+   
+  <div
+    class="name-inputs-container"
+  >
+    <nameinput-stub
+      id="0"
+      playername="Ned"
+    />
+    <nameinput-stub
+      id="1"
+      playername="Ted"
+    />
+    <nameinput-stub
+      id="2"
+      playername="Sue"
+    />
+  </div>
+</div>
+`;
+
 exports[`EnterNames snapshots should render with default html 1`] = `
 <div
   class="enter-names-container"
