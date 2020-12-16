@@ -1,5 +1,4 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils'
-// import store from "@/store/index"
+import { createLocalVue, shallowMount } from "@vue/test-utils"
 import Vuex from "vuex"
 import VueRouter from "vue-router"
 import SelectTeamPlayerNum from "@/views/SelectTeamPlayerNum"
@@ -9,6 +8,7 @@ import SelectTeamPlayerNum from "@/views/SelectTeamPlayerNum"
 const localVue = createLocalVue()
 localVue.use(Vuex)
 localVue.use(VueRouter)
+const router = new VueRouter()
 const mutations = { updatePlayerList: jest.fn() }
 const state = { teamNum: 2, playerNum: 2 }
 const store = new Vuex.Store({ mutations, state })
@@ -59,34 +59,38 @@ describe("SelectTeamPlayerNum", () => {
         component.vm.validateInputs()
 
         expect(component.vm.$data.showErr).toEqual(true)
-        store.state.teamNum = 2    //   these can be
-        store.state.playerNum = 2  //   removed
-      })
-
-      it.skip("should set route to EnterNames if teamNum < playerNum", () => {
-        // ****************************************
-        // ****************************************
-        //  failing at this.$router.push("/enterNames")
-        // ****************************************
-        // ****************************************
-        const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
-
-        store.state.teamNum = 2
-        store.state.playerNum = 4
-        component.vm.validateInputs()
-      })
-
-      it.skip("should set route to EnterNames if teamNum === playerNum", () => {
-        // ****************************************
-        // ****************************************
-        //  failing at this.$router.push("/enterNames")
-        // ****************************************
-        // ****************************************
-        const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
-
         store.state.teamNum = 2
         store.state.playerNum = 2
+      })
+
+      it("should set route to enterNames if teamNum < playerNum", () => {
+        const component = shallowMount(SelectTeamPlayerNum, {
+          store, localVue, router
+        })
+        store.state.teamNum = 2
+        store.state.playerNum = 4
+
         component.vm.validateInputs()
+
+        const result = component.vm.$router.history.current.path
+        expect(result).toEqual("/enterNames")
+        store.state.teamNum = 2
+        store.state.playerNum = 2
+      })
+
+      it("should set route to EnterNames if teamNum === playerNum", () => {
+        const component = shallowMount(SelectTeamPlayerNum, {
+          store, localVue, router
+        })
+        store.state.teamNum = 3
+        store.state.playerNum = 3
+
+        component.vm.validateInputs()
+
+        const result = component.vm.$router.history.current.path
+        expect(result).toEqual("/enterNames")
+        store.state.teamNum = 2
+        store.state.playerNum = 2
       })
     })
   })
@@ -118,20 +122,13 @@ describe("SelectTeamPlayerNum", () => {
 
     describe("playerNum", () => {
 
-      it.skip("should call updatePlayerList with correct value", () => {
+      it("should call updatePlayerList with correct value", async () => {
         const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
 
-        store.state.playerNum++
+        await store.state.playerNum++
 
-        const expected = [ "", "", "" ]
-
-        expect(mutations.updatePlayerList).toHaveBeenCalledWith({}, expected)
-        // ****************************************
-        // ****************************************
-        //    this is failing at
-        //    this.$store.commit("updatePlayerList", players)
-        // ****************************************
-        // ****************************************
+        const expected = ["", "", ""]
+        expect(mutations.updatePlayerList).toHaveBeenCalledWith(state, expected)
       })
     })
   })
@@ -140,15 +137,12 @@ describe("SelectTeamPlayerNum", () => {
 
     describe("events", () => {
 
-      it.skip("should call validateInputs when right arrow is clicked", () => {
+      it("should call validateInputs when right arrow is clicked", () => {
         const spy = jest.spyOn(SelectTeamPlayerNum.methods, "validateInputs")
-        const component = shallowMount(SelectTeamPlayerNum, { store, localVue })
-        // ****************************************
-        // ****************************************
-        //  this is failing because it's trying
-        //  to run this.$router.push("/enterNames")
-        // ****************************************
-        // ****************************************
+        const component = shallowMount(SelectTeamPlayerNum, {
+          store, localVue, router
+        })
+
         component.find("#right-arrow").trigger("click")
 
         expect(spy).toHaveBeenCalledTimes(1)
