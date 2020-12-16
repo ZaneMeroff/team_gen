@@ -1,7 +1,6 @@
-import { createLocalVue, mount, shallowMount } from '@vue/test-utils'
+import { createLocalVue, mount, shallowMount } from "@vue/test-utils"
 import store from "@/store/index"
 import Vuex from "vuex"
-
 import NumPickerIndex from "@/components/NumPicker/NumPickerIndex"
 import ArrowBtn from "@/components/ArrowBtn"
 
@@ -21,6 +20,15 @@ describe("NumPickerIndex", () => {
 
       expect(component.element).toMatchSnapshot()
     })
+
+    it("should render with default html", () => {
+      const propsData = { pickerType: "players" }
+      const component = shallowMount(NumPickerIndex, {
+        propsData, store, localVue
+      })
+
+      expect(component.element).toMatchSnapshot()
+    })
   })
 
   describe("props", () => {
@@ -34,7 +42,7 @@ describe("NumPickerIndex", () => {
       })
 
       it("should accept a string", () => {
-        const propsData = { pickerType: "player" }
+        const propsData = { pickerType: "players" }
         const component = shallowMount(NumPickerIndex, {
           propsData, store, localVue
         })
