@@ -22,3 +22,26 @@ exports[`NumPickerIndex snapshots should render with default html 1`] = `
   </div>
 </div>
 `;
+
+exports[`NumPickerIndex snapshots should render with default html 2`] = `
+<div
+  class="npi-perimeter-container"
+>
+  <numpickernumdisplay-stub
+    number="2"
+    pickertype="players"
+  />
+   
+  <div
+    class="arrow-btn-container"
+  >
+    <arrowbtn-stub
+      arrowdirection="up"
+    />
+     
+    <arrowbtn-stub
+      arrowdirection="down"
+    />
+  </div>
+</div>
+`;
