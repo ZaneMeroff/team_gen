@@ -18,8 +18,8 @@
     <div class="name-inputs-container">
       <NameInput
         v-for="(player, index) in playerList"
-        :key="index"
         :id="index"
+        :key="index"
         :playerName="player"
       />
     </div>
@@ -44,14 +44,6 @@
     },
     methods: {
 
-      validateInputs() {
-        let error = false
-        this.playerList.forEach(input => {
-          if ( !input.length ) { error = true }
-        })
-        this.evaluateError(error)
-      },
-
       evaluateError(error) {
         if ( !error ) {
           this.$router.push("/displayResults")
@@ -59,6 +51,14 @@
         } else {
           this.showErr = true
         }
+      },
+
+      validateInputs() {
+        let error = false
+        this.playerList.forEach(input => {
+          if ( !input.length ) { error = true }
+        })
+        this.evaluateError(error)
       },
     },
     computed: {
@@ -72,13 +72,12 @@
 
 <style scoped>
 
-  .name-inputs-container {
-    height: auto;
-    width: auto;
-  }
-
   .enter-names-container {
     height: auto;
   }
 
+  .name-inputs-container {
+    height: auto;
+    width: auto;
+  }
 </style>
