@@ -1,5 +1,5 @@
 <template>
-  <form autocomplete="off">
+  <form v-on:submit.prevent="onSubmit" autocomplete="off">
 
     <input
       @change="handleInputChange"
