@@ -6,9 +6,9 @@ http://zanemeroff.github.io/team_gen
 
 #### Introduction
 Welcome to Team Generator, a mobile friendly single page web application created to make assigning random teams quick and easy! Use it for board game night, volleyball in the park, or virtually any situation where you need to decide teams without human bias.
+<br>
 
-#### Why Did I Build This?
-This is the most recent project I’ve created to showcase the evolution of my programming skills. The app features clean, reusable code and components built with methods leveraging the single responsibility principle. A simple global Vuex store is integrated with Vue Router for view mapping. Jest is used in conjunction with Vue Test Utils to create a robust and thorough testing suite that accomplishes nearly 100% testing coverage.
+The app features clean, dry code and all components are built from scratch (no component libraries were used). A simple global Vuex store is integrated with Vue Router for view mapping. Jest is used in conjunction with Vue Test Utils to create a robust and thorough testing suite that accomplishes nearly 100% testing coverage.
 
 #### Screenshots
 ![screenshot](https://user-images.githubusercontent.com/53405028/102018215-1deda880-3d29-11eb-963c-ab4b9d2097ce.png)
