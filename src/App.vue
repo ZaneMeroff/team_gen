@@ -38,13 +38,14 @@
       ),
       linear-gradient(180deg, #0a0015 0%, #1a0033 50%, #0a0015 100%);
     display: flex;
+    align-items: flex-start;
     justify-content: center;
     overflow-y: scroll;
   }
 
   .app-inner-container {
     width: 400px;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(180deg,
       rgba(138, 43, 226, 0.3) 0%,
       rgba(75, 0, 130, 0.4) 25%,
@@ -58,10 +59,10 @@
       inset 0 0 60px rgba(138, 43, 226, 0.1);
     border-left: 2px solid rgba(0, 255, 255, 0.4);
     border-right: 2px solid rgba(255, 20, 147, 0.4);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
   }
 
   .app-title {
@@ -99,9 +100,11 @@
   .copywrite-text {
     text-transform: uppercase;
     margin: 20px;
+    margin-top: auto;
     color: rgba(0, 255, 255, 0.7);
     font-size: 0.7rem;
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    padding-top: 20px;
   }
 
   .nav-btn-container {
