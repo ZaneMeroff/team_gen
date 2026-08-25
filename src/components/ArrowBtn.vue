@@ -3,7 +3,9 @@
   <button
     @click="emitArrowBtnClick"
     :class="arrowDirection === 'up' || arrowDirection === 'down' ? 'arrow-btn' : 'arrow-btn nav-arrow-btn'">
-    <span v-html="arrowDisplay"></span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <polygon :points="arrowDisplay"/>
+    </svg>
   </button>
 
 </template>
@@ -18,10 +20,10 @@
       return {
         arrowDisplay: "",
         arrowKey: {
-          down:  "&#8595",
-          left:  "&#x2190",
-          right: "&#x2192",
-          up:    "&#8593",
+          down:  "12,20 3,5 21,5",
+          left:  "4,12 19,3 19,21",
+          right: "20,12 5,21 5,3",
+          up:    "12,4 21,19 3,19",
         },
       }
     },
@@ -48,19 +50,20 @@
     background-color: transparent;
     border: none;
     display: flex;
-    font-size: 3rem;
     height: 75px;
     justify-content: center;
     width: 75px;
     color: #00FFFF;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
     transition: all 0.3s ease;
   }
 
   .arrow-btn:active {
     color: #FF1493;
-    text-shadow: 0 0 15px rgba(255, 20, 147, 1);
     transform: scale(0.95);
+  }
+
+  .arrow-btn:active svg {
+    filter: drop-shadow(0 0 15px rgba(255, 20, 147, 1));
   }
 
   .arrow-btn:focus:not(:focus-visible) {
@@ -70,7 +73,10 @@
   .arrow-btn:hover {
     cursor: pointer;
     color: #FF1493;
-    text-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
+  }
+
+  .arrow-btn:hover svg {
+    filter: drop-shadow(0 0 15px rgba(255, 20, 147, 0.8));
   }
 
   .nav-arrow-btn {
@@ -123,11 +129,13 @@
     border-color: rgba(255, 20, 147, 0.8);
   }
 
-  span {
-    font-family: sans-serif;
-    font-size: 3.6rem;
-    font-weight: bolder;
+  svg {
+    fill: currentColor;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+    height: 2.5rem;
     position: relative;
+    transition: filter 0.3s ease;
+    width: 2.5rem;
     z-index: 1;
   }
 </style>

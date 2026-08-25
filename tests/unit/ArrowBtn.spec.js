@@ -45,7 +45,7 @@ describe("ArrowBtn", () => {
       it("should return a default value", () => {
         const component = shallowMount(ArrowBtn)
 
-        expect(component.vm.$data.arrowDisplay).toEqual("&#8593")
+        expect(component.vm.$data.arrowDisplay).toEqual("12,4 21,19 3,19")
       })
     })
 
@@ -55,10 +55,10 @@ describe("ArrowBtn", () => {
         const component = shallowMount(ArrowBtn)
 
         const expected = {
-          down:  "&#8595",
-          left:  "&#x2190",
-          right: "&#x2192",
-          up:    "&#8593",
+          down:  "12,20 3,5 21,5",
+          left:  "4,12 19,3 19,21",
+          right: "20,12 5,21 5,3",
+          up:    "12,4 21,19 3,19",
         }
         expect(component.vm.$data.arrowKey).toEqual(expected)
       })
@@ -74,7 +74,7 @@ describe("ArrowBtn", () => {
 
         component.vm.setArrowDisplay("up")
 
-        expect(component.vm.$data.arrowDisplay).toEqual("&#8593")
+        expect(component.vm.$data.arrowDisplay).toEqual("12,4 21,19 3,19")
       })
 
       it("should set arrowDisplay if arrowDirection is 'down'", () => {
@@ -82,7 +82,7 @@ describe("ArrowBtn", () => {
 
         component.vm.setArrowDisplay("down")
 
-        expect(component.vm.$data.arrowDisplay).toEqual("&#8595")
+        expect(component.vm.$data.arrowDisplay).toEqual("12,20 3,5 21,5")
       })
 
       it("should set arrowDisplay if arrowDirection is 'left'", () => {
@@ -90,7 +90,7 @@ describe("ArrowBtn", () => {
 
         component.vm.setArrowDisplay("left")
 
-        expect(component.vm.$data.arrowDisplay).toEqual("&#x2190")
+        expect(component.vm.$data.arrowDisplay).toEqual("4,12 19,3 19,21")
       })
 
       it("should set arrowDisplay if arrowDirection is 'right'", () => {
@@ -98,7 +98,7 @@ describe("ArrowBtn", () => {
 
         component.vm.setArrowDisplay("right")
 
-        expect(component.vm.$data.arrowDisplay).toEqual("&#x2192")
+        expect(component.vm.$data.arrowDisplay).toEqual("20,12 5,21 5,3")
       })
     })
 
