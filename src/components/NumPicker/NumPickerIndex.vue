@@ -74,9 +74,10 @@
       0 0 40px rgba(255, 20, 147, 0.2),
       inset 0 0 30px rgba(138, 43, 226, 0.3);
     display: flex;
+    justify-content: space-between;
     height: 150px;
     margin: 20px;
-    width: 150px;
+    width: 200px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;

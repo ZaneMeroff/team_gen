@@ -59,7 +59,7 @@
     height: 36px;
     margin: 0px auto 15px auto;
     padding-left: 15px;
-    width: 220px;
+    width: 250px;
     color: #00FFFF;
     font-weight: 700;
     transition: all 0.3s ease;

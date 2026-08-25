@@ -8,12 +8,14 @@
       />
 
       <div id="right-arrow" @click="validateInputs">
-        <ArrowBtn :arrowDirection="'right'"/>
+        <ArrowBtn 
+          :arrowDirection="'right'"
+        />
       </div>
     </div>
 
     <div class="err-msg">
-      <p v-if="showErr">you can't have more teams than players</p>
+      <p v-if="showErr">teams cannot be greater than players</p>
     </div>
 
     <div class="pickers-container">

@@ -65,9 +65,10 @@
   }
 
   .app-title {
-    margin: 30px 20px 20px 20px;
+    margin: 30px 20px 40px 20px;
     font-size: 2.5rem;
     font-weight: 900;
+    text-align: center;
     text-transform: uppercase;
     color: #fff;
     text-shadow:
@@ -106,7 +107,7 @@
   .nav-btn-container {
     display: flex;
     justify-content: space-between;
-    width: 250px;
+    width: 270px;
   }
 
   .err-msg {
@@ -115,9 +116,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px 0px;
+    margin: 20px 0px;
     text-align: center;
-    font-size: .8rem;
+    font-size: .6rem;
     color: #FF1493;
     text-shadow:
       0 0 5px rgba(255, 20, 147, 0.8),
