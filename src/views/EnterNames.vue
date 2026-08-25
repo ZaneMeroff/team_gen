@@ -12,7 +12,7 @@
     </div>
 
     <div class="err-msg">
-      <p v-if="showErr">please enter a name for every player</p>
+      <p v-if="showErr">enter a name for every player</p>
     </div>
 
     <div class="name-inputs-container">
@@ -77,6 +77,7 @@
   }
 
   .name-inputs-container {
+    margin-top: 20px;
     height: auto;
     width: auto;
   }

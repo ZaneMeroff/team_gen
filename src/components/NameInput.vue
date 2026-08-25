@@ -45,15 +45,45 @@
 <style scoped>
 
   .name-input {
-    background-color: #FFF;
-    border: 1px solid #000;
-    border-radius: 16px;
-    box-shadow: 0 0 1rem rgba(110, 15, 155, .6) inset;
+    background: linear-gradient(135deg,
+      rgba(10, 0, 30, 0.9) 0%,
+      rgba(26, 0, 51, 0.9) 100%
+    );
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    border-radius: 8px;
+    box-shadow:
+      0 0 15px rgba(0, 255, 255, 0.4),
+      inset 0 0 20px rgba(138, 43, 226, 0.3);
     display: block;
     font-size: 1.2rem;
-    height: 32px;
-    margin: 0px auto 10px auto;
-    padding-left: 10px;
-    width: 220px;
+    height: 36px;
+    margin: 0px auto 15px auto;
+    padding-left: 15px;
+    width: 250px;
+    color: #00FFFF;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .name-input::placeholder {
+    color: rgba(0, 255, 255, 0.5);
+    font-weight: 400;
+  }
+
+  .name-input:focus {
+    outline: none;
+    border-color: rgba(255, 20, 147, 0.8);
+    box-shadow:
+      0 0 20px rgba(255, 20, 147, 0.6),
+      0 0 40px rgba(0, 255, 255, 0.3),
+      inset 0 0 20px rgba(138, 43, 226, 0.4);
+    color: #FF1493;
+  }
+
+  .name-input:hover {
+    border-color: rgba(255, 20, 147, 0.6);
+    box-shadow:
+      0 0 18px rgba(255, 20, 147, 0.4),
+      inset 0 0 20px rgba(138, 43, 226, 0.3);
   }
 </style>
